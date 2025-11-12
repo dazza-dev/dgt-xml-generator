@@ -386,5 +386,21 @@
   {
     "name": "watt por metro cuadrado estereorradián",
     "value": "W/(m²·sr)"
+  },
+  {
+    "name": "watt por metro cuadrado",
+    "value": "W/m²"
+  },
+  {
+    "name": "watt por estereorradián",
+    "value": "W/sr"
+  },
+  {
+    "name": "weber",
+    "value": "Wb"
+  },
+  {
+    "name": "ohm",
+    "value": "Ω"
   }
 ]
