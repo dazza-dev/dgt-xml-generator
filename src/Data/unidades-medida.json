@@ -1,0 +1,258 @@
+[
+  {
+    "name": "uno (índice de refracción)",
+    "value": "1"
+  },
+  {
+    "name": "minuto",
+    "value": "´"
+  },
+  {
+    "name": "segundo",
+    "value": "´´"
+  },
+  {
+    "name": "grado Celsius",
+    "value": "°C"
+  },
+  {
+    "name": "1 por metro",
+    "value": "1/m"
+  },
+  {
+    "name": "Ampere",
+    "value": "A"
+  },
+  {
+    "name": "ampere por metro",
+    "value": "A/m"
+  },
+  {
+    "name": "ampere por metro cuadrado",
+    "value": "A/m²"
+  },
+  {
+    "name": "Activo Virtual",
+    "value": "Acv"
+  },
+  {
+    "name": "Alquiler de uso habitacional",
+    "value": "Al"
+  },
+  {
+    "name": "Alquiler de uso comercial",
+    "value": "Alc"
+  },
+  {
+    "name": "bel",
+    "value": "B"
+  },
+  {
+    "name": "Becquerel",
+    "value": "Bq"
+  },
+  {
+    "name": "coulomb",
+    "value": "C"
+  },
+  {
+    "name": "coulomb por kilogramo",
+    "value": "C/kg"
+  },
+  {
+    "name": "coulomb por metro cuadrado",
+    "value": "C/m²"
+  },
+  {
+    "name": "coulomb por metro cúbico",
+    "value": "C/m³"
+  },
+  {
+    "name": "Cajuela de café",
+    "value": "Cc"
+  },
+  {
+    "name": "Candela",
+    "value": "Cd"
+  },
+  {
+    "name": "candela por metro cuadrado",
+    "value": "cd/m²"
+  },
+  {
+    "name": "Comisiones",
+    "value": "Cm"
+  },
+  {
+    "name": "centímetro",
+    "value": "cm"
+  },
+  {
+    "name": "cuartillos de café",
+    "value": "Cu"
+  },
+  {
+    "name": "día",
+    "value": "D"
+  },
+  {
+    "name": "electronvolt",
+    "value": "eV"
+  },
+  {
+    "name": "farad",
+    "value": "F"
+  },
+  {
+    "name": "farad por metro",
+    "value": "F/m"
+  },
+  {
+    "name": "fanega de café",
+    "value": "Fa"
+  },
+  {
+    "name": "Gramo",
+    "value": "G"
+  },
+  {
+    "name": "Galón",
+    "value": "Gal"
+  },
+  {
+    "name": "gray",
+    "value": "Gy"
+  },
+  {
+    "name": "gray por segundo",
+    "value": "Gy/s"
+  },
+  {
+    "name": "hora",
+    "value": "h"
+  },
+  {
+    "name": "henry",
+    "value": "H"
+  },
+  {
+    "name": "henry por metro",
+    "value": "H/m"
+  },
+  {
+    "name": "hertz",
+    "value": "Hz"
+  },
+  {
+    "name": "Intereses",
+    "value": "I"
+  },
+  {
+    "name": "Joule",
+    "value": "J"
+  },
+  {
+    "name": "joule por kilogramo kelvin",
+    "value": "J/(kg·K)"
+  },
+  {
+    "name": "joule por mol kelvin",
+    "value": "J/(mol·K)"
+  },
+  {
+    "name": "joule por kelvin",
+    "value": "J/K"
+  },
+  {
+    "name": "joule por kilogramo",
+    "value": "J/kg"
+  },
+  {
+    "name": "joule por metro cúbico",
+    "value": "J/m³"
+  },
+  {
+    "name": "joule por mol",
+    "value": "J/mol"
+  },
+  {
+    "name": "Kelvin",
+    "value": "K"
+  },
+  {
+    "name": "katal",
+    "value": "Kat"
+  },
+  {
+    "name": "katal por metro cúbico",
+    "value": "kat/m³"
+  },
+  {
+    "name": "Kilogramo",
+    "value": "Kg"
+  },
+  {
+    "name": "kilogramo por metro cúbico",
+    "value": "kg/m³"
+  },
+  {
+    "name": "Kilometro",
+    "value": "Km"
+  },
+  {
+    "name": "kilovatios",
+    "value": "Kw"
+  },
+  {
+    "name": "Kilovatios por hora",
+    "value": "kWh"
+  },
+  {
+    "name": "litro",
+    "value": "L"
+  },
+  {
+    "name": "lumen",
+    "value": "Lm"
+  },
+  {
+    "name": "pulgada",
+    "value": "Ln"
+  },
+  {
+    "name": "lux",
+    "value": "Lx"
+  },
+  {
+    "name": "Metro",
+    "value": "M"
+  },
+  {
+    "name": "metro por segundo",
+    "value": "m/s"
+  },
+  {
+    "name": "metro por segundo cuadrado",
+    "value": "m/s²"
+  },
+  {
+    "name": "metro cuadrado",
+    "value": "m²"
+  },
+  {
+    "name": "metro cúbico",
+    "value": "m³"
+  },
+  {
+    "name": "minuto",
+    "value": "Min"
+  },
+  {
+    "name": "mililitro",
+    "value": "mL"
+  },
+  {
+    "name": "Milímetro",
+    "value": "Mm"
+  }
+]
