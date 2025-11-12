@@ -254,5 +254,137 @@
   {
     "name": "Milímetro",
     "value": "Mm"
+  },
+  {
+    "name": "Mol",
+    "value": "Mol"
+  },
+  {
+    "name": "mol por metro cúbico",
+    "value": "mol/m³"
+  },
+  {
+    "name": "newton",
+    "value": "N"
+  },
+  {
+    "name": "newton por metro",
+    "value": "N/m"
+  },
+  {
+    "name": "newton metro",
+    "value": "N·m"
+  },
+  {
+    "name": "neper",
+    "value": "Np"
+  },
+  {
+    "name": "grado",
+    "value": "°"
+  },
+  {
+    "name": "Otro tipo de servicio",
+    "value": "Os"
+  },
+  {
+    "name": "Se debe indicar la descripción de la medida a utilizar",
+    "value": "Otros"
+  },
+  {
+    "name": "Onzas",
+    "value": "Oz"
+  },
+  {
+    "name": "pascal",
+    "value": "Pa"
+  },
+  {
+    "name": "pascal segundo",
+    "value": "Pa·s"
+  },
+  {
+    "name": "Quintal",
+    "value": "Qq"
+  },
+  {
+    "name": "radián",
+    "value": "Rad"
+  },
+  {
+    "name": "radián por segundo",
+    "value": "rad/s"
+  },
+  {
+    "name": "radián por segundo cuadrado",
+    "value": "rad/s²"
+  },
+  {
+    "name": "Segundo",
+    "value": "S"
+  },
+  {
+    "name": "siemens",
+    "value": "s"
+  },
+  {
+    "name": "Servicios Profesionales",
+    "value": "Sp"
+  },
+  {
+    "name": "Servicios personales",
+    "value": "Spe"
+  },
+  {
+    "name": "estereorradián",
+    "value": "Sr"
+  },
+  {
+    "name": "Servicios técnicos",
+    "value": "St"
+  },
+  {
+    "name": "sievert",
+    "value": "Sv"
+  },
+  {
+    "name": "tesla",
+    "value": "t"
+  },
+  {
+    "name": "tonelada",
+    "value": "T"
+  },
+  {
+    "name": "unidad de masa atómica unificada",
+    "value": "U"
+  },
+  {
+    "name": "unidad astronómica",
+    "value": "Ua"
+  },
+  {
+    "name": "Unidad",
+    "value": "Unid"
+  },
+  {
+    "name": "volt",
+    "value": "V"
+  },
+  {
+    "name": "volt por metro",
+    "value": "V/m"
+  },
+  {
+    "name": "Watt",
+    "value": "W"
+  },
+  {
+    "name": "watt por metro kevin",
+    "value": "W/(m·K)"
+  },
+  {
+    "name": "watt por metro cuadrado estereorradián",
+    "value": "W/(m²·sr)"
   }
 ]
