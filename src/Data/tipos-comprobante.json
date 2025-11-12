@@ -1,26 +1,42 @@
 [
   {
     "code": "01",
-    "name": "Factura"
+    "name": "Factura electrónica"
+  },
+  {
+    "code": "02",
+    "name": "Nota de débito electrónica"
   },
   {
     "code": "03",
-    "name": "Liquidación de compra de bienes y prestación de servicios"
+    "name": "Nota de crédito electrónica"
   },
   {
     "code": "04",
-    "name": "Nota de crédito"
+    "name": "Tiquete electrónico"
   },
   {
     "code": "05",
-    "name": "Nota de débito"
+    "name": "Confirmación de aceptación del comprobante electrónico"
   },
   {
     "code": "06",
-    "name": "Guía de remisión"
+    "name": "Confirmación de aceptación parcial del comprobante electrónico"
   },
   {
     "code": "07",
-    "name": "Comprobante de retención"
+    "name": "Confirmación de rechazo del comprobante electrónico"
+  },
+  {
+    "code": "08",
+    "name": "Factura electrónica de compras"
+  },
+  {
+    "code": "09",
+    "name": "Factura electrónica de exportación"
+  },
+  {
+    "code": "10",
+    "name": "Recibo Electrónico de Pago"
   }
 ]
