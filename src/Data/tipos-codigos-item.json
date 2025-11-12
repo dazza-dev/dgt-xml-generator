@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Código del producto del vendedor",
+    "value": "01"
+  },
+  {
+    "name": "Código del producto del comprador",
+    "value": "02"
+  },
+  {
+    "name": "Código del producto asignado por el fabricante – industriales o importadores",
+    "value": "03"
+  },
+  {
+    "name": "Código uso interno",
+    "value": "04"
+  },
+  {
+    "name": "Otros",
+    "value": "99"
+  }
+]
