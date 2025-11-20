@@ -9,17 +9,11 @@ class Invoice extends Document
     /**
      * Invoice constructor
      */
-    public function __construct(
-        int $environmentCode = 1,
-        string $accessKey = '',
-        array $data = []
-    ) {
-        // Document type
-        $this->setDocumentType('01');
-
+    public function __construct(array $data = [])
+    {
         // Initialize invoice data
-        if (! empty($accessKey) && ! empty($data)) {
-            parent::__construct($environmentCode, $accessKey, $data);
+        if (empty($data)) {
+            parent::__construct($data);
         }
     }
 
