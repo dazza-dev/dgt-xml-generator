@@ -1,10 +1,10 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models\Totals;
+namespace DazzaDev\DgtXmlGenerator\Models;
 
-use DazzaDev\SriXmlGenerator\Models\Tax\Tax;
+use DazzaDev\DgtXmlGenerator\Models\Tax\Tax;
 
-class Totals
+class Summary
 {
     /**
      * Subtotal amount (without taxes)
