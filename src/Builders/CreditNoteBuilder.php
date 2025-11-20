@@ -11,7 +11,7 @@ class CreditNoteBuilder extends BaseDocumentBuilder
      */
     protected function createDocument(): CreditNote
     {
-        return new CreditNote($this->environmentCode, $this->accessKey, $this->documentData);
+        return new CreditNote($this->documentData);
     }
 
     /**

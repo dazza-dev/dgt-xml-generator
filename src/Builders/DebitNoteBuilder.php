@@ -11,7 +11,7 @@ class DebitNoteBuilder extends BaseDocumentBuilder
      */
     protected function createDocument(): DebitNote
     {
-        return new DebitNote($this->environmentCode, $this->accessKey, $this->documentData);
+        return new DebitNote($this->documentData);
     }
 
     /**
