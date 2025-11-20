@@ -2,6 +2,9 @@
 
 namespace DazzaDev\DgtXmlGenerator\Models\Entities;
 
+use DazzaDev\DgtXmlGenerator\DataLoader;
+use DazzaDev\DgtXmlGenerator\Models\Location\Location;
+
 abstract class EntityBase
 {
     /**
@@ -15,14 +18,14 @@ abstract class EntityBase
     private string $identificationNumber;
 
     /**
-     * Legal name of the company
+     * Name
      */
-    public string $legalName;
+    public string $name;
 
     /**
-     * Trade name of the company
+     * Trade name
      */
-    public string $tradeName;
+    public ?string $tradeName = null;
 
     /**
      * Location
@@ -56,68 +59,67 @@ abstract class EntityBase
             return;
         }
 
-        $this->setRuc($data['ruc']);
-        $this->setLegalName($data['legal_name']);
-        $this->setTradeName($data['trade_name'] ?? '');
-        $this->setHeadOfficeAddress($data['head_office_address']);
+        $this->setName($data['name']);
 
-        // RIMPE Regime Taxpayer
-        if (isset($data['rimpe_regime_taxpayer'])) {
-            $this->setRimpeRegimeTaxpayer($data['rimpe_regime_taxpayer']);
-        }
-
-        // Special Taxpayer Number
-        if (isset($data['special_taxpayer_number'])) {
-            $this->setSpecialTaxpayerNumber($data['special_taxpayer_number']);
-        }
-
-        // Withholding Agent
-        if (isset($data['withholding_agent'])) {
-            $this->setWithholdingAgent($data['withholding_agent']);
-        }
-
-        // Requires Accounting
-        if (isset($data['requires_accounting'])) {
-            $this->setRequiresAccounting($data['requires_accounting']);
+        if (isset($data['trade_name'])) {
+            $this->setTradeName($data['trade_name']);
         }
     }
 
     /**
-     * Get RUC
+     * Get identification type
      */
-    public function getRuc(): string
+    public function getIdentificationType(): IdentificationType
     {
-        return $this->ruc;
+        return $this->identificationType;
     }
 
     /**
-     * Set RUC
+     * Set identification type
      */
-    public function setRuc(string $ruc): void
+    public function setIdentificationType(int|string $identificationTypeCode): void
     {
-        $this->ruc = $ruc;
+        $identificationType = (new DataLoader('tipos-identificacion'))->getByCode($identificationTypeCode);
+
+        $this->identificationType = new IdentificationType($identificationType);
     }
 
     /**
-     * Get legal name
+     * Get identification number
      */
-    public function getLegalName(): string
+    public function getIdentificationNumber(): string
     {
-        return $this->legalName;
+        return $this->identificationNumber;
     }
 
     /**
-     * Set legal name
+     * Set identification number
      */
-    public function setLegalName(string $legalName): void
+    public function setIdentificationNumber(string $identificationNumber): void
     {
-        $this->legalName = $legalName;
+        $this->identificationNumber = $identificationNumber;
+    }
+
+    /**
+     * Get name
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set name
+     */
+    public function setName(string $name): void
+    {
+        $this->name = $name;
     }
 
     /**
      * Get trade name
      */
-    public function getTradeName(): string
+    public function getTradeName(): ?string
     {
         return $this->tradeName;
     }
@@ -131,83 +133,15 @@ abstract class EntityBase
     }
 
     /**
-     * Get head office address
-     */
-    public function getHeadOfficeAddress(): string
-    {
-        return $this->headOfficeAddress;
-    }
-
-    /**
-     * Set head office address
-     */
-    public function setHeadOfficeAddress(string $headOfficeAddress): void
-    {
-        $this->headOfficeAddress = $headOfficeAddress;
-    }
-
-    /**
-     * Get special taxpayer number
-     */
-    public function getSpecialTaxpayerNumber(): ?string
-    {
-        return $this->specialTaxpayerNumber;
-    }
-
-    /**
-     * Set special taxpayer number
-     */
-    public function setSpecialTaxpayerNumber(string $specialTaxpayerNumber): void
-    {
-        $this->specialTaxpayerNumber = $specialTaxpayerNumber;
-    }
-
-    /**
-     * Get whether the company is a withholding agent
-     */
-    public function isWithholdingAgent(): bool
-    {
-        return $this->withholdingAgent;
-    }
-
-    /**
-     * Set whether the company is a withholding agent
-     */
-    public function setWithholdingAgent(bool $withholdingAgent): void
-    {
-        $this->withholdingAgent = $withholdingAgent;
-    }
-
-    /**
-     * Get whether the company is required to keep accounting
-     */
-    public function requiresAccounting(): bool
-    {
-        return $this->requiresAccounting;
-    }
-
-    /**
-     * Set whether the company is required to keep accounting
-     */
-    public function setRequiresAccounting(bool $requiresAccounting): void
-    {
-        $this->requiresAccounting = $requiresAccounting;
-    }
-
-    /**
      * Get base array representation
      */
     protected function getBaseArray(): array
     {
         return [
-            'ruc' => $this->ruc,
-            'legal_name' => $this->legalName,
-            'trade_name' => $this->tradeName,
-            'head_office_address' => $this->headOfficeAddress,
-            'rimpe_regime_taxpayer' => $this->rimpeRegimeTaxpayer?->toArray(),
-            'special_taxpayer_number' => $this->specialTaxpayerNumber,
-            'withholding_agent' => $this->withholdingAgent,
-            'requires_accounting' => $this->requiresAccounting,
+            'identification_type' => $this->getIdentificationType()->toArray(),
+            'identification_number' => $this->getIdentificationNumber(),
+            'name' => $this->getName(),
+            'trade_name' => $this->getTradeName(),
         ];
     }
 

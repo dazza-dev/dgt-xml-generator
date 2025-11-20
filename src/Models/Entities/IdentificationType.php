@@ -1,6 +1,8 @@
 <?php
 
-namespace DazzaDev\DgtXmlGenerator\Models;
+namespace DazzaDev\DgtXmlGenerator\Models\Entities;
+
+use DazzaDev\DgtXmlGenerator\Models\BaseModel;
 
 class IdentificationType extends BaseModel
 {
