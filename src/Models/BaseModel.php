@@ -1,6 +1,6 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models;
+namespace DazzaDev\DgtXmlGenerator\Models;
 
 abstract class BaseModel
 {

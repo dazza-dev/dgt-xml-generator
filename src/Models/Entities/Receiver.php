@@ -1,31 +1,11 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models;
+namespace DazzaDev\DgtXmlGenerator\Models\Entities;
 
-use DazzaDev\SriXmlGenerator\DataLoader;
+use DazzaDev\DgtXmlGenerator\DataLoader;
 
-class Customer
+class Receiver
 {
-    /**
-     * Identification type
-     */
-    private IdentificationType $identificationType;
-
-    /**
-     * Identification number
-     */
-    private string $identificationNumber;
-
-    /**
-     * Name
-     */
-    private string $name;
-
-    /**
-     * Address
-     */
-    private ?string $address = null;
-
     /**
      * Customer constructor
      */

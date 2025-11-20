@@ -1,8 +1,10 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models;
+namespace DazzaDev\DgtXmlGenerator\Models\Location;
 
-class RimpeRegime extends BaseModel
+use DazzaDev\DgtXmlGenerator\Models\BaseModel;
+
+class Canton extends BaseModel
 {
     /**
      * Get array representation

@@ -1,15 +1,18 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models;
+namespace DazzaDev\DgtXmlGenerator\Models\Entities;
 
-use DazzaDev\SriXmlGenerator\DataLoader;
-
-class Company
+abstract class EntityBase
 {
     /**
-     * Company identification number (RUC)
+     * Identification type
      */
-    public string $ruc;
+    private IdentificationType $identificationType;
+
+    /**
+     * Identification number
+     */
+    private string $identificationNumber;
 
     /**
      * Legal name of the company
@@ -22,29 +25,19 @@ class Company
     public string $tradeName;
 
     /**
-     * Head office address of the company
+     * Location
      */
-    public string $headOfficeAddress;
+    private ?Location $location = null;
 
     /**
-     * RIMPE regime taxpayer information
+     * Phone number with country code
      */
-    public ?RimpeRegime $rimpeRegimeTaxpayer = null;
+    public ?Phone $phone = null;
 
     /**
-     * Special taxpayer number (Contribuyente Especial)
+     * Email
      */
-    public ?string $specialTaxpayerNumber = null;
-
-    /**
-     * Whether the company is a withholding agent (Agente de retención)
-     */
-    public bool $withholdingAgent = false;
-
-    /**
-     * Whether the company is required to keep accounting (obligado a llevar contabilidad)
-     */
-    public bool $requiresAccounting = false;
+    public ?string $email = null;
 
     /**
      * Constructor to initialize the Company model
@@ -154,24 +147,6 @@ class Company
     }
 
     /**
-     * Get RIMPE regime taxpayer
-     */
-    public function getRimpeRegimeTaxpayer(): ?RimpeRegime
-    {
-        return $this->rimpeRegimeTaxpayer;
-    }
-
-    /**
-     * Set RIMPE regime taxpayer
-     */
-    public function setRimpeRegimeTaxpayer(string $rimpeRegimeTaxpayer): void
-    {
-        $rimpeRegime = (new DataLoader('rimpe-regimes'))->getByCode($rimpeRegimeTaxpayer);
-
-        $this->rimpeRegimeTaxpayer = new RimpeRegime($rimpeRegime);
-    }
-
-    /**
      * Get special taxpayer number
      */
     public function getSpecialTaxpayerNumber(): ?string
@@ -220,9 +195,9 @@ class Company
     }
 
     /**
-     * Convert the Company instance to array
+     * Get base array representation
      */
-    public function toArray(): array
+    protected function getBaseArray(): array
     {
         return [
             'ruc' => $this->ruc,
@@ -235,4 +210,9 @@ class Company
             'requires_accounting' => $this->requiresAccounting,
         ];
     }
+
+    /**
+     * Get array representation
+     */
+    abstract public function toArray(): array;
 }

@@ -1,8 +1,10 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models;
+namespace DazzaDev\DgtXmlGenerator\Models\Location;
 
-class IdentificationType extends BaseModel
+use DazzaDev\DgtXmlGenerator\Models\BaseModel;
+
+class District extends BaseModel
 {
     /**
      * Get array representation
