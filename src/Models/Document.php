@@ -1,31 +1,21 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models;
+namespace DazzaDev\DgtXmlGenerator\Models;
 
-use DazzaDev\SriXmlGenerator\DataLoader;
-use DazzaDev\SriXmlGenerator\DateValidator;
-use DazzaDev\SriXmlGenerator\Enums\Environments;
-use DazzaDev\SriXmlGenerator\Models\Document\AdditionalInfo;
-use DazzaDev\SriXmlGenerator\Models\Document\LineItem;
-use DazzaDev\SriXmlGenerator\Models\Payment\Payment;
-use DazzaDev\SriXmlGenerator\Models\Totals\Totals;
+use DazzaDev\DgtXmlGenerator\DataLoader;
+use DazzaDev\DgtXmlGenerator\DateValidator;
+use DazzaDev\DgtXmlGenerator\Models\Document\LineItem;
+use DazzaDev\DgtXmlGenerator\Models\Entities\Issuer;
+use DazzaDev\DgtXmlGenerator\Models\Entities\Receiver;
+use DazzaDev\DgtXmlGenerator\Models\Payment\Payment;
+use DazzaDev\DgtXmlGenerator\Models\Totals\Totals;
 
 class Document
 {
     /**
-     * Environment
-     */
-    private array $environment;
-
-    /**
      * Document type
      */
     private DocumentType $documentType;
-
-    /**
-     * Access key
-     */
-    private string $accessKey;
 
     /**
      * Sequential number
@@ -40,29 +30,22 @@ class Document
     /**
      * Establishment information
      */
-    public Establishment $establishment;
+    public string $establishment = '';
 
     /**
      * Emission point information
      */
-    public EmissionPoint $emissionPoint;
+    public string $emissionPoint = '';
 
     /**
-     * Customer information
+     * Issuer information
      */
-    private Customer $customer;
+    private Issuer $issuer;
 
     /**
-     * Company information
+     * Receiver information
      */
-    private Company $company;
-
-    /**
-     * Additional information
-     *
-     * @var AdditionalInfo[]
-     */
-    private array $additionalInfo = [];
+    private Receiver $receiver;
 
     /**
      * Line items information
@@ -84,19 +67,12 @@ class Document
     private Totals $totals;
 
     /**
-     * Referenced document information
-     */
-    private ?ReferencedDocument $referencedDocument = null;
-
-    /**
      * Document constructor
      *
      * @param  array  $data  Document data
      */
-    public function __construct(int $environmentCode, string $accessKey, array $data)
+    public function __construct(array $data)
     {
-        $this->setEnvironment(Environments::from($environmentCode));
-        $this->setAccessKey($accessKey);
         $this->initialize($data);
     }
 
@@ -118,21 +94,16 @@ class Document
         $this->setDate($data['date']);
 
         // Establishment
-        $this->setEstablishment(new Establishment($data['establishment']));
+        $this->setEstablishment($data['establishment']);
 
         // Emission Point
-        $this->setEmissionPoint(new EmissionPoint($data['emission_point']));
+        $this->setEmissionPoint($data['emission_point']);
 
-        // Company
-        $this->setCompany($data['company']);
+        // Issuer
+        $this->setIssuer($data['issuer']);
 
-        // Customer
-        $this->setCustomer($data['customer']);
-
-        // Additional info
-        if (isset($data['additional_info'])) {
-            $this->setAdditionalInfo($data['additional_info']);
-        }
+        // Receiver
+        $this->setReceiver($data['receiver']);
 
         // Line items
         if (isset($data['line_items'])) {
@@ -148,38 +119,6 @@ class Document
         if (isset($data['totals'])) {
             $this->setTotals($data['totals']);
         }
-    }
-
-    /**
-     * Set access key
-     */
-    public function setAccessKey(string $accessKey): void
-    {
-        $this->accessKey = $accessKey;
-    }
-
-    /**
-     * Get access key
-     */
-    public function getAccessKey(): string
-    {
-        return $this->accessKey;
-    }
-
-    /**
-     * Set environment
-     */
-    public function setEnvironment(Environments $environment): void
-    {
-        $this->environment = $environment->toArray();
-    }
-
-    /**
-     * Get environment
-     */
-    public function getEnvironment()
-    {
-        return $this->environment;
     }
 
     /**
@@ -249,7 +188,7 @@ class Document
     /**
      * Get establishment
      */
-    public function getEstablishment(): Establishment
+    public function getEstablishment(): string
     {
         return $this->establishment;
     }
@@ -257,7 +196,7 @@ class Document
     /**
      * Set establishment
      */
-    public function setEstablishment(Establishment $establishment): void
+    public function setEstablishment(string $establishment): void
     {
         $this->establishment = $establishment;
     }
@@ -265,7 +204,7 @@ class Document
     /**
      * Get emission point
      */
-    public function getEmissionPoint(): EmissionPoint
+    public function getEmissionPoint(): string
     {
         return $this->emissionPoint;
     }
@@ -273,70 +212,41 @@ class Document
     /**
      * Set emission point
      */
-    public function setEmissionPoint(EmissionPoint $emissionPoint): void
+    public function setEmissionPoint(string $emissionPoint): void
     {
         $this->emissionPoint = $emissionPoint;
     }
 
     /**
-     * Get customer
+     * Get issuer
      */
-    public function getCustomer(): Customer
+    public function getIssuer(): Issuer
     {
-        return $this->customer;
+        return $this->issuer;
     }
 
     /**
-     * Set customer
+     * Set issuer
      */
-    public function setCustomer(array|Customer $customer): void
+    public function setIssuer(array|Issuer $issuer): void
     {
-        $this->customer = $customer instanceof Customer ? $customer : new Customer($customer);
+        $this->issuer = $issuer instanceof Issuer ? $issuer : new Issuer($issuer);
     }
 
     /**
-     * Get company
+     * Get receiver
      */
-    public function getCompany(): Company
+    public function getReceiver(): Receiver
     {
-        return $this->company;
+        return $this->receiver;
     }
 
     /**
-     * Set company
+     * Set receiver
      */
-    public function setCompany(array|Company $company): void
+    public function setReceiver(array|Receiver $receiver): void
     {
-        $this->company = $company instanceof Company ? $company : new Company($company);
-    }
-
-    /**
-     * Get additional info
-     *
-     * @return AdditionalInfo[]
-     */
-    public function getAdditionalInfo(): array
-    {
-        return $this->additionalInfo;
-    }
-
-    /**
-     * Set additional info
-     */
-    public function setAdditionalInfo(array $additionalInfo): void
-    {
-        $this->additionalInfo = [];
-        foreach ($additionalInfo as $info) {
-            $this->addAdditionalInfo($info);
-        }
-    }
-
-    /**
-     * Add additional info item
-     */
-    public function addAdditionalInfo(array|AdditionalInfo $info): void
-    {
-        $this->additionalInfo[] = $info instanceof AdditionalInfo ? $info : new AdditionalInfo($info);
+        $this->receiver = $receiver instanceof Receiver ? $receiver : new Receiver($receiver);
     }
 
     /**
@@ -414,37 +324,18 @@ class Document
     }
 
     /**
-     * Get referenced document
-     */
-    public function getReferencedDocument(): ?ReferencedDocument
-    {
-        return $this->referencedDocument;
-    }
-
-    /**
-     * Set referenced document
-     */
-    public function setReferencedDocument(array|ReferencedDocument $referencedDocument): void
-    {
-        $this->referencedDocument = $referencedDocument instanceof ReferencedDocument ? $referencedDocument : new ReferencedDocument($referencedDocument);
-    }
-
-    /**
      * Get array representation
      */
     public function toArray(): array
     {
         return [
-            'environment' => $this->getEnvironment(),
             'document_type' => $this->getDocumentType()->toArray(),
-            'access_key' => $this->getAccessKey(),
             'sequential' => $this->getSequential(),
             'date' => $this->getDate(),
-            'establishment' => $this->getEstablishment()->toArray(),
-            'emission_point' => $this->getEmissionPoint()->toArray(),
-            'customer' => $this->getCustomer()->toArray(),
-            'company' => $this->getCompany()->toArray(),
-            'additional_info' => array_map(fn (AdditionalInfo $info) => $info->toArray(), $this->getAdditionalInfo()),
+            'establishment' => $this->getEstablishment(),
+            'emission_point' => $this->getEmissionPoint(),
+            'issuer' => $this->getIssuer()->toArray(),
+            'receiver' => $this->getReceiver()->toArray(),
             'line_items' => array_map(fn (LineItem $lineItem) => $lineItem->toArray(), $this->getLineItems()),
             'payments' => array_map(fn (Payment $payment) => $payment->toArray(), $this->getPayments()),
             'totals' => $this->getTotals()->toArray(),

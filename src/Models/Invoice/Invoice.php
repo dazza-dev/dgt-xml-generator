@@ -1,8 +1,8 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models\Invoice;
+namespace DazzaDev\DgtXmlGenerator\Models\Invoice;
 
-use DazzaDev\SriXmlGenerator\Models\Document;
+use DazzaDev\DgtXmlGenerator\Models\Document;
 
 class Invoice extends Document
 {
