@@ -5,24 +5,35 @@ namespace DazzaDev\DgtXmlGenerator\Models;
 class Summary
 {
     public string $currencyCode = '';
+
     public float $exchangeRate = 0.0;
 
     public float $totalTaxedServices = 0.0;
+
     public float $totalExemptServices = 0.0;
+
     public float $totalExoneratedServices = 0.0;
+
     public float $totalNonSubjectServices = 0.0;
 
     public float $totalTaxedGoods = 0.0;
+
     public float $totalExemptGoods = 0.0;
+
     public float $totalExoneratedGoods = 0.0;
+
     public float $totalNonSubjectGoods = 0.0;
 
     public float $totalTaxed = 0.0;
+
     public float $totalExempt = 0.0;
+
     public float $totalExonerated = 0.0;
+
     public float $totalNonSubject = 0.0;
 
     public float $totalSale = 0.0;
+
     public float $totalNetSale = 0.0;
 
     public array $taxBreakdown = [];
@@ -30,6 +41,7 @@ class Summary
     public float $totalTax = 0.0;
 
     public string $paymentMethodType = '';
+
     public float $paymentMethodTotal = 0.0;
 
     public float $totalDocument = 0.0;
