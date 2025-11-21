@@ -28,6 +28,11 @@ abstract class EntityBase
     public ?string $tradeName = null;
 
     /**
+     * Activity
+     */
+    private ?Activity $activity = null;
+
+    /**
      * Location
      */
     private ?Location $location = null;
@@ -73,6 +78,10 @@ abstract class EntityBase
 
         if (isset($data['trade_name'])) {
             $this->setTradeName($data['trade_name']);
+        }
+
+        if (isset($data['activity'])) {
+            $this->setActivity($data['activity']);
         }
 
         if (isset($data['location'])) {
@@ -155,6 +164,26 @@ abstract class EntityBase
     }
 
     /**
+     * Get activity
+     */
+    public function getActivity(): ?Activity
+    {
+        return $this->activity;
+    }
+
+    /**
+     * Set activity
+     */
+    public function setActivity(Activity|array $activity): void
+    {
+        if (is_array($activity)) {
+            $activity = new Activity($activity);
+        }
+
+        $this->activity = $activity;
+    }
+
+    /**
      * Get location
      */
     public function getLocation(): ?Location
@@ -220,6 +249,7 @@ abstract class EntityBase
             'identification_number' => $this->getIdentificationNumber(),
             'name' => $this->getName(),
             'trade_name' => $this->getTradeName(),
+            'activity' => $this->getActivity()?->toArray(),
             'location' => $this->getLocation()?->toArray(),
             'phone' => $this->getPhone()?->toArray(),
             'email' => $this->getEmail(),
