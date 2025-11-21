@@ -7,12 +7,10 @@ use DazzaDev\DgtXmlGenerator\Models\Company;
 use DazzaDev\DgtXmlGenerator\Models\CreditNote\CreditNote;
 use DazzaDev\DgtXmlGenerator\Models\Customer;
 use DazzaDev\DgtXmlGenerator\Models\DebitNote\DebitNote;
-use DazzaDev\DgtXmlGenerator\Models\DeliveryGuide\DeliveryGuide;
 use DazzaDev\DgtXmlGenerator\Models\Document;
 use DazzaDev\DgtXmlGenerator\Models\EmissionPoint;
 use DazzaDev\DgtXmlGenerator\Models\Establishment;
 use DazzaDev\DgtXmlGenerator\Models\Invoice\Invoice;
-use DazzaDev\DgtXmlGenerator\Models\WithholdingReceipt\WithholdingReceipt;
 use DazzaDev\DgtXmlGenerator\XmlHelper;
 use DOMDocument;
 use InvalidArgumentException;
@@ -52,7 +50,7 @@ abstract class BaseDocumentBuilder
     /**
      * Create document instance (must be implemented by child classes)
      */
-    abstract protected function createDocument(): Invoice|CreditNote|DebitNote|DeliveryGuide|WithholdingReceipt;
+    abstract protected function createDocument(): Invoice|CreditNote|DebitNote;
 
     /**
      * Get document type for XML generation (must be implemented by child classes)

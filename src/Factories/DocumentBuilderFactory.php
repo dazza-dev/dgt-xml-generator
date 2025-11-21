@@ -19,12 +19,12 @@ class DocumentBuilderFactory
     /**
      * Create a document builder based on document type name
      */
-    public static function create(int $environmentCode, string $documentType, string $accessKey, array $documentData): BaseDocumentBuilder
+    public static function create(string $documentType, array $documentData): BaseDocumentBuilder
     {
         return match ($documentType) {
-            self::INVOICE => new InvoiceBuilder($environmentCode, $accessKey, $documentData),
-            self::CREDIT_NOTE => new CreditNoteBuilder($environmentCode, $accessKey, $documentData),
-            self::DEBIT_NOTE => new DebitNoteBuilder($environmentCode, $accessKey, $documentData),
+            self::INVOICE => new InvoiceBuilder($documentData),
+            self::CREDIT_NOTE => new CreditNoteBuilder($documentData),
+            self::DEBIT_NOTE => new DebitNoteBuilder($documentData),
             default => throw new InvalidArgumentException("Unsupported document type: {$documentType}")
         };
     }
@@ -32,24 +32,24 @@ class DocumentBuilderFactory
     /**
      * Create an invoice builder
      */
-    public static function createInvoice(int $environmentCode, string $accessKey, array $documentData): InvoiceBuilder
+    public static function createInvoice(array $documentData): InvoiceBuilder
     {
-        return new InvoiceBuilder($environmentCode, $accessKey, $documentData);
+        return new InvoiceBuilder($documentData);
     }
 
     /**
      * Create a credit note builder
      */
-    public static function createCreditNote(int $environmentCode, string $accessKey, array $documentData): CreditNoteBuilder
+    public static function createCreditNote(array $documentData): CreditNoteBuilder
     {
-        return new CreditNoteBuilder($environmentCode, $accessKey, $documentData);
+        return new CreditNoteBuilder($documentData);
     }
 
     /**
      * Create a debit note builder
      */
-    public static function createDebitNote(int $environmentCode, string $accessKey, array $documentData): DebitNoteBuilder
+    public static function createDebitNote(array $documentData): DebitNoteBuilder
     {
-        return new DebitNoteBuilder($environmentCode, $accessKey, $documentData);
+        return new DebitNoteBuilder($documentData);
     }
 }
