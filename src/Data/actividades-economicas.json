@@ -640,5 +640,66 @@
   {
     "code": "4663.0",
     "name": "Venta al por mayor de materiales de construcción, articulos de ferretería y equipo y materiales de fontanería y calefacción"
+  },
+  {
+    "code": "4669.9",
+    "name": "Venta al por mayor de basura, desechos y otros productos n.c.p"
+  },
+  {
+    "code": "4690.0",
+    "name": "Venta al por mayor de otros productos no especializada"
+  },
+  {
+    "code": "4711.2",
+    "name": "Venta al por menor en minisuper, pulperías y similares"
+  },
+  {
+    "code": "4721.1",
+    "name": "Venta al por menor de carne de bovino, porcino y sus derivados"
+  },
+  {
+    "code": "4721.2",
+    "name": "Venta al por menor de carne de bovino, porcino y sus derivados"
+  },
+  { "code": "4721.3", "name": "Venta al por menor de pescados y mariscos" },
+  {
+    "code": "4722.0",
+    "name": "Venta al por menor de bebidas en comercios especializados"
+  },
+  {
+    "code": "4751.0",
+    "name": "Venta al por menor de productos textiles en comercios especializados"
+  },
+  {
+    "code": "4752.1",
+    "name": "Venta al por menor de artículos de ferretería y pinturas en comercios especializados"
+  },
+  {
+    "code": "4759.0",
+    "name": "Venta al por menor de aparatos eléctricos de uso doméstico, muebles, equipos de iluminación y otros enseres domésticos en comercios especializados"
+  },
+  {
+    "code": "4761.0",
+    "name": "Venta al por menor de libros, periódicos y artículos de papelería en comercios especializados"
+  },
+  {
+    "code": "4762.0",
+    "name": "Venta al por menor de grabaciones musicales y videográficas en comercios especializados"
+  },
+  {
+    "code": "4763.0",
+    "name": "Venta al por menor de artículos de deporte en comercios especializados"
+  },
+  {
+    "code": "4771.1",
+    "name": "Venta al por menor de prendas de vestir y artículos de cuero en almacenes especializados"
+  },
+  {
+    "code": "4771.2",
+    "name": "Venta al por menor de prendas de vestir y artículos de cuero en almacenes especializados"
+  },
+  {
+    "code": "4772.0",
+    "name": "Venta al por menor de productos farmacéuticos y medicinales, cosméticos y artículos de tocador en comercios especializados"
   }
 ]
