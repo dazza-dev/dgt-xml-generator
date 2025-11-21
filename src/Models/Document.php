@@ -2,6 +2,7 @@
 
 namespace DazzaDev\DgtXmlGenerator\Models;
 
+use DazzaDev\DgtXmlGenerator\DataLoader;
 use DazzaDev\DgtXmlGenerator\DateValidator;
 use DazzaDev\DgtXmlGenerator\Models\Document\LineItem;
 use DazzaDev\DgtXmlGenerator\Models\Entities\Issuer;
@@ -20,6 +21,11 @@ class Document
      * Date of the document
      */
     private string $date;
+
+    /**
+     * Situation
+     */
+    private ?Situation $situation = null;
 
     /**
      * Establishment information
@@ -86,6 +92,11 @@ class Document
 
         // Date
         $this->setDate($data['date']);
+
+        // Situation
+        if (isset($data['situation'])) {
+            $this->setSituation($data['situation']);
+        }
 
         // Establishment
         $this->setEstablishment($data['establishment']);
@@ -162,6 +173,24 @@ class Document
     }
 
     /**
+     * Get situation
+     */
+    public function getSituation(): ?Situation
+    {
+        return $this->situation;
+    }
+
+    /**
+     * Set situation
+     */
+    public function setSituation(int|string $situationCode): void
+    {
+        $situation = (new DataLoader('situacion-comprobantes'))->getByCode($situationCode);
+
+        $this->situation = new Situation($situation);
+    }
+
+    /**
      * Get establishment
      */
     public function getEstablishment(): string
@@ -233,6 +262,7 @@ class Document
         return [
             'sequential' => $this->getSequential(),
             'date' => $this->getDate(),
+            'situation' => $this->getSituation()?->toArray(),
             'establishment' => $this->getEstablishment(),
             'emission_point' => $this->getEmissionPoint(),
             'issuer' => $this->getIssuer()->toArray(),
