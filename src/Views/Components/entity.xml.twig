@@ -1,0 +1,22 @@
+<{{ node }}>
+  <Nombre>{{ entity.name }}</Nombre>
+  <Identificacion>
+      <Tipo>{{ entity.identification_type.code }}</Tipo>
+      <Numero>{{ entity.identification_number }}</Numero>
+  </Identificacion>
+  {% if entity.trade_name %}
+  <NombreComercial>{{ entity.trade_name }}</NombreComercial>
+  {% endif %} 
+  <Ubicacion>
+    <Provincia>{{ entity.location.province.code }}</Provincia>
+    <Canton>{{ entity.location.canton.code }}</Canton>
+    <Distrito>{{ entity.location.district.code }}</Distrito>
+    <Barrio>{{ entity.location.neighborhood }}</Barrio>
+    <OtrasSenas>{{ entity.location.address_detail }}</OtrasSenas>
+  </Ubicacion>
+  <Telefono>
+    <CodigoPais>{{ entity.phone.country_code }}</CodigoPais>
+    <NumTelefono>{{ entity.phone.number }}</NumTelefono>
+  </Telefono>
+  <CorreoElectronico>{{ entity.email }}</CorreoElectronico>
+</{{ node }}>

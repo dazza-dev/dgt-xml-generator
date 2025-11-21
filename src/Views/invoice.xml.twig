@@ -4,10 +4,8 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.4/facturaElectronica"
 >
-  {% include 'Components/issuer-info.xml.twig' %} {% include
-  'Components/invoice/info.xml.twig' %} {% include
-  'Components/invoice/items.xml.twig' with { 'lineItems': line_items } %} {%
-  include 'Components/additional-info.xml.twig' with { 'node': 'infoAdicional',
-  'nodeItem': 'campoAdicional', 'additionalInfo': additional_info } %}
+  {% include 'Components/entity.xml.twig' with { 'entity': issuer, node:
+  'Emisor' } %} {% include 'Components/entity.xml.twig' with { 'entity':
+  receiver, node: 'Receptor' } %}
 </FacturaElectronica>
 {% endapply %}
