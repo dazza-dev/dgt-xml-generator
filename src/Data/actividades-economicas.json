@@ -809,5 +809,19 @@
   {
     "code": "9411.0",
     "name": "Actividades de Asociaciones empresariales y de empleadores"
+  },
+  { "code": "9420.0", "name": "Actividades de sindicatos" },
+  {
+    "code": "9511.0",
+    "name": "Reparación de computadoras y equipo periférico"
+  },
+  { "code": "9524.0", "name": "Reparación de muebles y accesorios domésticos" },
+  {
+    "code": "9529.0",
+    "name": "Reparación de otros bienes personales y enseres domésticos n.c.p"
+  },
+  {
+    "code": "9601.0",
+    "name": "Lavado y limpieza, incluida la limpieza en seco, de productos textiles y piel"
   }
 ]
