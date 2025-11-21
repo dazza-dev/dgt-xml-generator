@@ -300,6 +300,80 @@ class Document
     }
 
     /**
+     * Get line items
+     *
+     * @return LineItem[]
+     */
+    public function getLineItems(): array
+    {
+        return $this->lineItems;
+    }
+
+    /**
+     * Set line items
+     */
+    public function setLineItems(array $lineItems): void
+    {
+        $this->lineItems = [];
+        foreach ($lineItems as $lineItem) {
+            $this->addLineItem($lineItem);
+        }
+    }
+
+    /**
+     * Add line item
+     */
+    public function addLineItem(array|LineItem $lineItem): void
+    {
+        $this->lineItems[] = $lineItem instanceof LineItem ? $lineItem : new LineItem($lineItem);
+    }
+
+    /**
+     * Get payments
+     *
+     * @return Payment[]
+     */
+    public function getPayments(): array
+    {
+        return $this->payments;
+    }
+
+    /**
+     * Set payments
+     */
+    public function setPayments(array $payments): void
+    {
+        $this->payments = [];
+        foreach ($payments as $payment) {
+            $this->addPayment($payment);
+        }
+    }
+
+    /**
+     * Add payment item
+     */
+    public function addPayment(array|Payment $payment): void
+    {
+        $this->payments[] = $payment instanceof Payment ? $payment : new Payment($payment);
+    }
+
+    /**
+     * Get totals
+     */
+    public function getSummary(): Summary
+    {
+        return $this->summary;
+    }
+
+    /**
+     * Set summary
+     */
+    public function setSummary(array|Summary $summary): void
+    {
+        $this->summary = $summary instanceof Summary ? $summary : new Summary($summary);
+    }
+
+    /**
      * Get array representation
      */
     public function toArray(): array
