@@ -578,5 +578,7 @@
     "code": "2710.0",
     "name": "Fabricación de motores eléctricos, generadores, transformadores eléctricos y aparatos de distribución y control de la energía eléctrica"
   },
-  { "code": "3290.0", "name": "Otras industrias manufactureras n.c.p" }
+  { "code": "3290.0", "name": "Otras industrias manufactureras n.c.p" },
+  { "code": "3312.0", "name": "Reparación de maquinaria" },
+  { "code": "3530.0", "name": "Suministro de vapor y aire acondicionado" }
 ]
