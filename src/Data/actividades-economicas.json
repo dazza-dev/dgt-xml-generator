@@ -514,5 +514,69 @@
   },
   { "code": "0146.9", "name": "Cría de otras aves de corral, excepto pollos" },
   { "code": "0161.2", "name": "Servicios de fumigación y riego agrícola" },
-  { "code": "0161.9", "name": "Otros servicios de apoyo a la agricultura" }
+  { "code": "0161.9", "name": "Otros servicios de apoyo a la agricultura" },
+  { "code": "0899.0", "name": "Explotación de otras minas y canteras n.c.p" },
+  {
+    "code": "1030.0",
+    "name": "Elaboración y conservación de frutas, legumbres y hortalizas (vegetales)"
+  },
+  { "code": "1050.0", "name": "Elaboración de productos lácteos" },
+  {
+    "code": "1061.9",
+    "name": "Elaboración de productos de molinería excepto arroz"
+  },
+  {
+    "code": "1072.0",
+    "name": "Elaboración de azúcar y otros productos derivados de la caña de azúcar"
+  },
+  {
+    "code": "1072.9",
+    "name": "Elaboración de azúcar y otros productos derivados de la caña de azúcar"
+  },
+  {
+    "code": "1073.0",
+    "name": "Elaboración de cacao, chocolate y productos de confitería"
+  },
+  {
+    "code": "1074.0",
+    "name": "Elaboración de macarrones, fideos, alcuzuz y productos farináceos similares"
+  },
+  {
+    "code": "1090.9",
+    "name": "Elaboración de otros productos alimenticios n.c.p"
+  },
+  {
+    "code": "1091.0",
+    "name": "Elaboración de alimentos preparados para animales"
+  },
+  { "code": "1313.0", "name": "Acabado de productos textiles" },
+  {
+    "code": "1394.0",
+    "name": "Fabricación de cuerdas, cordeles, bramantes y redes"
+  },
+  {
+    "code": "1410.9",
+    "name": "Fabricación de otras prendas de vestir, excepto ropa interior y prendas de piel"
+  },
+  {
+    "code": "1622.0",
+    "name": "Fabricación de partes y piezas de carpintería para edificios y construcciones"
+  },
+  { "code": "2011.0", "name": "Fabricación de sustancias químicas básicas" },
+  {
+    "code": "2013.0",
+    "name": "Fabricación de plásticos y de caucho sintético en formas primarias"
+  },
+  { "code": "2029.0", "name": "Fabricación de otros productos químicos n.c.p" },
+  { "code": "2592.0", "name": "Tratamiento y revestimiento de metales" },
+  { "code": "2599.0", "name": "Fabricación de otros productos de metal n.c.p" },
+  {
+    "code": "2610.0",
+    "name": "Fabricación de componentes y tableros electrónicos"
+  },
+  {
+    "code": "2710.0",
+    "name": "Fabricación de motores eléctricos, generadores, transformadores eléctricos y aparatos de distribución y control de la energía eléctrica"
+  },
+  { "code": "3290.0", "name": "Otras industrias manufactureras n.c.p" }
 ]
