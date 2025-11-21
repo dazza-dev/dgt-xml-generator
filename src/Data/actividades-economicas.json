@@ -1,0 +1,130 @@
+[
+  { "code": "0114.0", "name": "Cultivo de caña de azúcar" },
+  { "code": "0115.0", "name": "Cultivo de tabaco" },
+  { "code": "0116.0", "name": "Cultivo de plantas de fibras" },
+  { "code": "0117.0", "name": "Cultivo de flores" },
+  { "code": "0122.1", "name": "Cultivo de banano" },
+  { "code": "0122.2", "name": "Cultivo de piña" },
+  {
+    "code": "0122.9",
+    "name": "Cultivo de otras frutas tropicales y subtropicales"
+  },
+  { "code": "0126.1", "name": "Cultivo de café" },
+  { "code": "0127.1", "name": "Cultivo de palma africana (aceitera)" },
+  {
+    "code": "0128.0",
+    "name": "Cultivo de especies de plantas aromáticas, medicinales y farmacéuticas"
+  },
+  { "code": "0141.1", "name": "Cría de ganado Bovino (vacuno) para carne" },
+  {
+    "code": "0141.2",
+    "name": "Cría de ganado Bovino (vacuno) para producción de leche cruda"
+  },
+  {
+    "code": "0141.3",
+    "name": "Cría de Búfalos y otra producción de ganado bovino (vacuno)"
+  },
+  { "code": "0144.0", "name": "Cría de caballos y otros equinos" },
+  { "code": "0145.0", "name": "Cría de ovejas y cabras" },
+  { "code": "0146.0", "name": "Cría de cerdos" },
+  {
+    "code": "0142.0",
+    "name": "Actividades de granja para la producción de huevos de gallina"
+  },
+  { "code": "0148.0", "name": "Cría de aves" },
+  {
+    "code": "0149.2",
+    "name": "Cultivo de productos agrícolas en combinación con la cría de animales (explotación mixta)"
+  },
+  { "code": "0162.9", "name": "Otras actividades de apoyo a la ganadería" },
+  { "code": "0163.9", "name": "Otras actividades posteriores a la cosecha" },
+  {
+    "code": "0210.3",
+    "name": "Caza ordinaria, mediante trampas y actividades de servicio conexas"
+  },
+  { "code": "0220.0", "name": "Extracción de madera" },
+  { "code": "0312.0", "name": "Acuicultura marina" },
+  { "code": "0721.0", "name": "Extracción de carbón de piedra" },
+  { "code": "0810.0", "name": "Extracción de piedra, arena y arcilla" },
+  {
+    "code": "0891.0",
+    "name": "Extracción de minerales para la fabricación de abonos y productos químicos"
+  },
+  { "code": "0893.0", "name": "Extracción de sal" },
+  {
+    "code": "1010.9",
+    "name": "Elaboración y conservación de otro tipo de carnes n.c.p"
+  },
+  {
+    "code": "1020.0",
+    "name": "Elaboración y conservación de pescados, crustáceos y moluscos"
+  },
+  {
+    "code": "1040.0",
+    "name": "Elaboración de aceites y grasas de origen vegetal y animal"
+  },
+  { "code": "1061.1", "name": "Beneficio de arroz" },
+  {
+    "code": "1062.0",
+    "name": "Elaboración de almidones y productos derivados del almidón"
+  },
+  {
+    "code": "1104.0",
+    "name": "Elaboración de bebidas no alcohólicas; producción de aguas minerales y otras aguas embotelladas"
+  },
+  { "code": "1200.0", "name": "Elaboración de productos de tabaco" },
+  { "code": "1312.0", "name": "Tejedura de productos textiles" },
+  { "code": "1391.0", "name": "Fabricación de tejidos de punto y ganchillo" },
+  {
+    "code": "1392.0",
+    "name": "Fabricación de artículos confeccionados con materiales textiles, excepto prendas de vestir"
+  },
+  { "code": "1393.0", "name": "Fabricación de tapices y alfombras" },
+  {
+    "code": "1511.0",
+    "name": "Curtido y adobo de cueros; adobo y teñido de pieles"
+  },
+  {
+    "code": "1512.0",
+    "name": "Fabricación de maletas, bolsos de mano y artículos similares, y artículos de talabartería o guarnicionería"
+  },
+  { "code": "1520.0", "name": "Fabricación de calzado" },
+  { "code": "1610.1", "name": "Aserrado y acepilladura de madera" },
+  {
+    "code": "1621.0",
+    "name": "Fabricación de hojas de madera para enchapado y tableros a base de madera"
+  },
+  {
+    "code": "1701.0",
+    "name": "Fabricación de pasta de madera, papel y cartón"
+  },
+  {
+    "code": "1709.0",
+    "name": "Fabricación de otros artículos del papel y cartón"
+  },
+  { "code": "1800.0", "name": "Reproducción de grabaciones" },
+  {
+    "code": "2011.0",
+    "name": "Fabricación de abonos y compuestos de nitrógeno"
+  },
+  {
+    "code": "2021.0",
+    "name": "Fabricación de plaguicidas y de otros productos químicos de uso agropecuario"
+  },
+  {
+    "code": "2023.0",
+    "name": "Fabricación de perfumes y preparados de tocador"
+  },
+  { "code": "2030.0", "name": "Fabricación de fibras artificiales" },
+  {
+    "code": "2100.0",
+    "name": "Fabricación de productos farmacéuticos, sustancias químicas medicinales y de productos botánicos de uso farmacéutico"
+  },
+  { "code": "2219.0", "name": "Fabricación de otros productos de caucho" },
+  { "code": "2229.0", "name": "Fabricación de otros productos de plástico" },
+  {
+    "code": "2310.1",
+    "name": "Fabricación de vidrio y de productos de vidrio"
+  },
+  { "code": "2391.0", "name": "Fabricación de productos refractarios" }
+]
