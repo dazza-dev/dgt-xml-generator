@@ -580,5 +580,65 @@
   },
   { "code": "3290.0", "name": "Otras industrias manufactureras n.c.p" },
   { "code": "3312.0", "name": "Reparación de maquinaria" },
-  { "code": "3530.0", "name": "Suministro de vapor y aire acondicionado" }
+  { "code": "3530.0", "name": "Suministro de vapor y aire acondicionado" },
+  { "code": "3600.0", "name": "Captación, tratamiento y distribución de agua" },
+  { "code": "3830.0", "name": "Recuperación de materiales" },
+  { "code": "4321.0", "name": "Instalación eléctrica y de telecomunicaciones" },
+  {
+    "code": "4322.0",
+    "name": "Instalación de fontanería e instalación de calefacción y aire acondicionado"
+  },
+  { "code": "4390.0", "name": "Otro tipo de instalaciones de construcción" },
+  { "code": "4330.0", "name": "Terminación y acabados de edificios" },
+  { "code": "4510.0", "name": "Venta de vehículos automotores" },
+  {
+    "code": "4520.0",
+    "name": "Mantenimiento y reparación de vehículos automotores"
+  },
+  {
+    "code": "4530.0",
+    "name": "Venta de partes, piezas y accesorios de vehículos automotores"
+  },
+  { "code": "4540.0", "name": "Venta de motocicletas" },
+  {
+    "code": "4620.0",
+    "name": "Venta al por mayor de materias primas agropecuarias y animales vivos"
+  },
+  {
+    "code": "4630.0",
+    "name": "Venta al por mayor de frutas y verduras frescas"
+  },
+  {
+    "code": "4634.0",
+    "name": "Venta al por mayor de licores, bebidas y tabaco"
+  },
+  { "code": "4639.0", "name": "Venta al por mayor de otros alimentos" },
+  {
+    "code": "4649.2",
+    "name": "Venta al por mayor de productos farmacéuticos, veterinarios y artículos de tocador"
+  },
+  {
+    "code": "4649.3",
+    "name": "Venta al por mayor de juegos, juguetes, artículos deportivos y de esparcimiento"
+  },
+  {
+    "code": "4649.9",
+    "name": "Venta al por mayor de otros enseres domésticos n.c.p"
+  },
+  {
+    "code": "4653.0",
+    "name": "Venta al por mayor de maquinaria, equipo y materiales agropecuarios"
+  },
+  {
+    "code": "4659.0",
+    "name": "Venta al por mayor de otro tipo de maquinaria y equipo"
+  },
+  {
+    "code": "4661.0",
+    "name": "Venta al por mayor de combustibles sólidos, líquidos y gaseosos y de productos conexos"
+  },
+  {
+    "code": "4663.0",
+    "name": "Venta al por mayor de materiales de construcción, articulos de ferretería y equipo y materiales de fontanería y calefacción"
+  }
 ]
