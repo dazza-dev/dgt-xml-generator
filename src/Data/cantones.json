@@ -1,6 +1,22 @@
 [
-  {
-    "code": 1,
-    "name": "SAN JOSE"
-  }
+  { "code": "01", "name": "SAN JOSE" },
+  { "code": "02", "name": "ESCAZU" },
+  { "code": "03", "name": "DESAMPARADOS" },
+  { "code": "04", "name": "PURISCAL" },
+  { "code": "05", "name": "TARRAZU" },
+  { "code": "06", "name": "ASERRI" },
+  { "code": "07", "name": "MORA" },
+  { "code": "08", "name": "GOICOECHEA" },
+  { "code": "09", "name": "SANTA ANA" },
+  { "code": "10", "name": "ALAJUELITA" },
+  { "code": "11", "name": "VAZQUEZ DE CORONADO" },
+  { "code": "12", "name": "ACOSTA" },
+  { "code": "13", "name": "TIBAS" },
+  { "code": "14", "name": "MORAVIA" },
+  { "code": "15", "name": "MONTES DE OCA" },
+  { "code": "16", "name": "TURRUBARES" },
+  { "code": "17", "name": "DOTA" },
+  { "code": "18", "name": "CURRIDABAT" },
+  { "code": "19", "name": "PEREZ ZELEDON" },
+  { "code": "20", "name": "LEON CORTES CASTRO" }
 ]
