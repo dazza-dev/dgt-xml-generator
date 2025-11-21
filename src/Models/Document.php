@@ -148,9 +148,9 @@ class Document
      */
     public function setDate(string $date): void
     {
-        $dateValidator = new DateValidator;
+        (new DateValidator)->validate($date);
 
-        $this->date = $dateValidator->getDate($date);
+        $this->date = $date;
     }
 
     /**
