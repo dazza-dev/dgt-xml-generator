@@ -1,26 +1,25 @@
-<detalles>
-    {% for item in lineItems %}
-    <detalle>
-        <codigoPrincipal>{{ item.code }}</codigoPrincipal>
-        <codigoAuxiliar>{{ item.auxiliary_code }}</codigoAuxiliar>
-        <descripcion>{{ item.description }}</descripcion>
-        <unidadMedida>{{ item.unit }}</unidadMedida>
-        <cantidad>{{ item.quantity }}</cantidad>
-        <precioUnitario>{{ item.unit_price }}</precioUnitario>
-        {% if item.unit_price_without_subsidy %}
-        <precioSinSubsidio>{{
-            item.unit_price_without_subsidy
-        }}</precioSinSubsidio>
-        {% endif %}
-        <descuento>{{ item.discount }}</descuento>
-        <precioTotalSinImpuesto>{{
-            item.total_price_without_tax
-        }}</precioTotalSinImpuesto>
-        {% include 'Components/additional-info.xml.twig' with { 'node':
-        'detallesAdicionales', 'nodeItem': 'detAdicional', 'additionalInfo':
-        item.additional_info } %} {% include 'Components/invoice/taxes.xml.twig'
-        with { 'node': 'impuestos', 'nodeItem': 'impuesto','taxes': item.taxes}
-        %}
-    </detalle>
-    {% endfor %}
-</detalles>
+<DetalleServicio>
+  {% for item in lineItems %}
+  <LineaDetalle>
+    <NumeroLinea>{{ loop.index }}</NumeroLinea>
+    <CodigoCABYS>{{ item.code }}</CodigoCABYS>
+    <CodigoComercial>
+      <Tipo>04</Tipo>
+      <Codigo>1</Codigo>
+    </CodigoComercial>
+    <Cantidad>1.000</Cantidad>
+    <UnidadMedida>Sp</UnidadMedida>
+    <TipoTransaccion>01</TipoTransaccion>
+    <Detalle>SERVICIOS CONTABLES DEL MES DE OCT 2025</Detalle>
+    <PrecioUnitario>50.00000</PrecioUnitario>
+    <MontoTotal>50.00000</MontoTotal>
+    <SubTotal>50.00000</SubTotal>
+    <BaseImponible>50.00000</BaseImponible>
+    {% include 'Components/invoice/tax.xml.twig' with { 'node':
+    'Impuesto','tax': item.tax} %}
+    <ImpuestoAsumidoEmisorFabrica>0</ImpuestoAsumidoEmisorFabrica>
+    <ImpuestoNeto>6.50000</ImpuestoNeto>
+    <MontoTotalLinea>56.50000</MontoTotalLinea>
+  </LineaDetalle>
+  {% endfor %}
+</DetalleServicio>
