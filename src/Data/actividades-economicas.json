@@ -761,5 +761,53 @@
   {
     "code": "7730.0",
     "name": "Alquiler y arrendamiento de otros tipos de maquinaria, equipo y bienes tangibles"
+  },
+  {
+    "code": "7740.0",
+    "name": "Arrendamiento de propiedad intelectual y productos similares excepto obras protegidas por derechos de autor"
+  },
+  { "code": "7912.0", "name": "Actividades de operadores turísticos" },
+  { "code": "8010.0", "name": "Actividades de seguridad privada" },
+  {
+    "code": "8219.0",
+    "name": "Fotocopiado, preparación de documentos y otras actividades especializadas de apoyo de oficina"
+  },
+  {
+    "code": "8291.0",
+    "name": "Actividades de agencias de cobro y agencias de calificación crediticia"
+  },
+  {
+    "code": "8413.0",
+    "name": "Regulación y facilitación de la actividad económica"
+  },
+  {
+    "code": "8424.0",
+    "name": "Actividades de mantenimiento del orden público y de seguridad"
+  },
+  { "code": "8510.0", "name": "Enseñanza preescolar y primaria" },
+  { "code": "8521.0", "name": "Enseñanza secundaria de formación general" },
+  { "code": "8541.0", "name": "Educación deportiva y recreativa" },
+  { "code": "8542.0", "name": "Educación cultural" },
+  { "code": "8549.0", "name": "Otros tipos de enseñanza n.c.p" },
+  { "code": "8550.0", "name": "Actividades de apoyo a la enseñanza" },
+  { "code": "8610.0", "name": "Actividades de hospitales" },
+  { "code": "8690.1", "name": "Laboratorios médicos y de diagnóstico" },
+  {
+    "code": "8690.9",
+    "name": "Otras actividades relacionadas con la salud humana"
+  },
+  {
+    "code": "8890.0",
+    "name": "Otras actividades de asistencia social sin alojamiento n.c.p"
+  },
+  { "code": "9311.0", "name": "Gestión de instalaciones deportivas" },
+  { "code": "9319.0", "name": "Otras actividades deportivas" },
+  {
+    "code": "9329.0",
+    "name": "Otras actividades de esparcimiento y recreativas n.c.p"
+  },
+  {
+    "code": "9411.0",
+    "name": "Actividades de Asociaciones empresariales y de empleadores"
   }
 ]
