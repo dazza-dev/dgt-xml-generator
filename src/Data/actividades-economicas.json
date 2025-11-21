@@ -947,5 +947,26 @@
   {
     "code": "8411.0",
     "name": "Actividades de la administración pública en general"
+  },
+  { "code": "8530.1", "name": "Enseñanza universitaria" },
+  { "code": "8620.1", "name": "Actividades de médicos" },
+  {
+    "code": "8790.0",
+    "name": "Otras actividades de atención en instituciones n.c.p"
+  },
+  {
+    "code": "9000.0",
+    "name": "Actividades creativas, artísticas y de entretenimiento"
+  },
+  { "code": "9200.0", "name": "Actividades de juego de azar y apuestas" },
+  { "code": "9603.0", "name": "Funerales y actividades conexas" },
+  { "code": "0000.1", "name": "Preoperativa" },
+  {
+    "code": "0000.2",
+    "name": "Servicios digitales o de telecomunicaciones e intangibles prestados desde el exterior por proveedores"
+  },
+  {
+    "code": "0000.3",
+    "name": "Servicios digitales o de telecomunicaciones e intangibles prestados desde el exterior por intermediarios"
   }
 ]
