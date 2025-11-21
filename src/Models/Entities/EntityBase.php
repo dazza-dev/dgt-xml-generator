@@ -59,10 +59,32 @@ abstract class EntityBase
             return;
         }
 
-        $this->setName($data['name']);
+        if (isset($data['identification_type'])) {
+            $this->setIdentificationType($data['identification_type']);
+        }
+
+        if (isset($data['identification_number'])) {
+            $this->setIdentificationNumber($data['identification_number']);
+        }
+
+        if (isset($data['name'])) {
+            $this->setName($data['name']);
+        }
 
         if (isset($data['trade_name'])) {
             $this->setTradeName($data['trade_name']);
+        }
+
+        if (isset($data['location'])) {
+            $this->setLocation($data['location']);
+        }
+
+        if (isset($data['phone'])) {
+            $this->setPhone($data['phone']);
+        }
+
+        if (isset($data['email'])) {
+            $this->setEmail($data['email']);
         }
     }
 
@@ -133,6 +155,62 @@ abstract class EntityBase
     }
 
     /**
+     * Get location
+     */
+    public function getLocation(): ?Location
+    {
+        return $this->location;
+    }
+
+    /**
+     * Set location
+     */
+    public function setLocation(Location|array $location): void
+    {
+        if (is_array($location)) {
+            $location = new Location($location);
+        }
+
+        $this->location = $location;
+    }
+
+    /**
+     * Get phone number with country code
+     */
+    public function getPhone(): ?Phone
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set phone number with country code
+     */
+    public function setPhone(Phone|array $phone): void
+    {
+        if (is_array($phone)) {
+            $phone = new Phone($phone);
+        }
+
+        $this->phone = $phone;
+    }
+
+    /**
+     * Get email
+     */
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
+    }
+
+    /**
      * Get base array representation
      */
     protected function getBaseArray(): array
@@ -142,6 +220,9 @@ abstract class EntityBase
             'identification_number' => $this->getIdentificationNumber(),
             'name' => $this->getName(),
             'trade_name' => $this->getTradeName(),
+            'location' => $this->getLocation()?->toArray(),
+            'phone' => $this->getPhone()?->toArray(),
+            'email' => $this->getEmail(),
         ];
     }
 

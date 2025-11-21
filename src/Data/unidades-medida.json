@@ -1,406 +1,406 @@
 [
   {
     "name": "uno (índice de refracción)",
-    "value": "1"
+    "code": "1"
   },
   {
     "name": "minuto",
-    "value": "´"
+    "code": "´"
   },
   {
     "name": "segundo",
-    "value": "´´"
+    "code": "´´"
   },
   {
     "name": "grado Celsius",
-    "value": "°C"
+    "code": "°C"
   },
   {
     "name": "1 por metro",
-    "value": "1/m"
+    "code": "1/m"
   },
   {
     "name": "Ampere",
-    "value": "A"
+    "code": "A"
   },
   {
     "name": "ampere por metro",
-    "value": "A/m"
+    "code": "A/m"
   },
   {
     "name": "ampere por metro cuadrado",
-    "value": "A/m²"
+    "code": "A/m²"
   },
   {
     "name": "Activo Virtual",
-    "value": "Acv"
+    "code": "Acv"
   },
   {
     "name": "Alquiler de uso habitacional",
-    "value": "Al"
+    "code": "Al"
   },
   {
     "name": "Alquiler de uso comercial",
-    "value": "Alc"
+    "code": "Alc"
   },
   {
     "name": "bel",
-    "value": "B"
+    "code": "B"
   },
   {
     "name": "Becquerel",
-    "value": "Bq"
+    "code": "Bq"
   },
   {
     "name": "coulomb",
-    "value": "C"
+    "code": "C"
   },
   {
     "name": "coulomb por kilogramo",
-    "value": "C/kg"
+    "code": "C/kg"
   },
   {
     "name": "coulomb por metro cuadrado",
-    "value": "C/m²"
+    "code": "C/m²"
   },
   {
     "name": "coulomb por metro cúbico",
-    "value": "C/m³"
+    "code": "C/m³"
   },
   {
     "name": "Cajuela de café",
-    "value": "Cc"
+    "code": "Cc"
   },
   {
     "name": "Candela",
-    "value": "Cd"
+    "code": "Cd"
   },
   {
     "name": "candela por metro cuadrado",
-    "value": "cd/m²"
+    "code": "cd/m²"
   },
   {
     "name": "Comisiones",
-    "value": "Cm"
+    "code": "Cm"
   },
   {
     "name": "centímetro",
-    "value": "cm"
+    "code": "cm"
   },
   {
     "name": "cuartillos de café",
-    "value": "Cu"
+    "code": "Cu"
   },
   {
     "name": "día",
-    "value": "D"
+    "code": "D"
   },
   {
     "name": "electronvolt",
-    "value": "eV"
+    "code": "eV"
   },
   {
     "name": "farad",
-    "value": "F"
+    "code": "F"
   },
   {
     "name": "farad por metro",
-    "value": "F/m"
+    "code": "F/m"
   },
   {
     "name": "fanega de café",
-    "value": "Fa"
+    "code": "Fa"
   },
   {
     "name": "Gramo",
-    "value": "G"
+    "code": "G"
   },
   {
     "name": "Galón",
-    "value": "Gal"
+    "code": "Gal"
   },
   {
     "name": "gray",
-    "value": "Gy"
+    "code": "Gy"
   },
   {
     "name": "gray por segundo",
-    "value": "Gy/s"
+    "code": "Gy/s"
   },
   {
     "name": "hora",
-    "value": "h"
+    "code": "h"
   },
   {
     "name": "henry",
-    "value": "H"
+    "code": "H"
   },
   {
     "name": "henry por metro",
-    "value": "H/m"
+    "code": "H/m"
   },
   {
     "name": "hertz",
-    "value": "Hz"
+    "code": "Hz"
   },
   {
     "name": "Intereses",
-    "value": "I"
+    "code": "I"
   },
   {
     "name": "Joule",
-    "value": "J"
+    "code": "J"
   },
   {
     "name": "joule por kilogramo kelvin",
-    "value": "J/(kg·K)"
+    "code": "J/(kg·K)"
   },
   {
     "name": "joule por mol kelvin",
-    "value": "J/(mol·K)"
+    "code": "J/(mol·K)"
   },
   {
     "name": "joule por kelvin",
-    "value": "J/K"
+    "code": "J/K"
   },
   {
     "name": "joule por kilogramo",
-    "value": "J/kg"
+    "code": "J/kg"
   },
   {
     "name": "joule por metro cúbico",
-    "value": "J/m³"
+    "code": "J/m³"
   },
   {
     "name": "joule por mol",
-    "value": "J/mol"
+    "code": "J/mol"
   },
   {
     "name": "Kelvin",
-    "value": "K"
+    "code": "K"
   },
   {
     "name": "katal",
-    "value": "Kat"
+    "code": "Kat"
   },
   {
     "name": "katal por metro cúbico",
-    "value": "kat/m³"
+    "code": "kat/m³"
   },
   {
     "name": "Kilogramo",
-    "value": "Kg"
+    "code": "Kg"
   },
   {
     "name": "kilogramo por metro cúbico",
-    "value": "kg/m³"
+    "code": "kg/m³"
   },
   {
     "name": "Kilometro",
-    "value": "Km"
+    "code": "Km"
   },
   {
     "name": "kilovatios",
-    "value": "Kw"
+    "code": "Kw"
   },
   {
     "name": "Kilovatios por hora",
-    "value": "kWh"
+    "code": "kWh"
   },
   {
     "name": "litro",
-    "value": "L"
+    "code": "L"
   },
   {
     "name": "lumen",
-    "value": "Lm"
+    "code": "Lm"
   },
   {
     "name": "pulgada",
-    "value": "Ln"
+    "code": "Ln"
   },
   {
     "name": "lux",
-    "value": "Lx"
+    "code": "Lx"
   },
   {
     "name": "Metro",
-    "value": "M"
+    "code": "M"
   },
   {
     "name": "metro por segundo",
-    "value": "m/s"
+    "code": "m/s"
   },
   {
     "name": "metro por segundo cuadrado",
-    "value": "m/s²"
+    "code": "m/s²"
   },
   {
     "name": "metro cuadrado",
-    "value": "m²"
+    "code": "m²"
   },
   {
     "name": "metro cúbico",
-    "value": "m³"
+    "code": "m³"
   },
   {
     "name": "minuto",
-    "value": "Min"
+    "code": "Min"
   },
   {
     "name": "mililitro",
-    "value": "mL"
+    "code": "mL"
   },
   {
     "name": "Milímetro",
-    "value": "Mm"
+    "code": "Mm"
   },
   {
     "name": "Mol",
-    "value": "Mol"
+    "code": "Mol"
   },
   {
     "name": "mol por metro cúbico",
-    "value": "mol/m³"
+    "code": "mol/m³"
   },
   {
     "name": "newton",
-    "value": "N"
+    "code": "N"
   },
   {
     "name": "newton por metro",
-    "value": "N/m"
+    "code": "N/m"
   },
   {
     "name": "newton metro",
-    "value": "N·m"
+    "code": "N·m"
   },
   {
     "name": "neper",
-    "value": "Np"
+    "code": "Np"
   },
   {
     "name": "grado",
-    "value": "°"
+    "code": "°"
   },
   {
     "name": "Otro tipo de servicio",
-    "value": "Os"
+    "code": "Os"
   },
   {
     "name": "Se debe indicar la descripción de la medida a utilizar",
-    "value": "Otros"
+    "code": "Otros"
   },
   {
     "name": "Onzas",
-    "value": "Oz"
+    "code": "Oz"
   },
   {
     "name": "pascal",
-    "value": "Pa"
+    "code": "Pa"
   },
   {
     "name": "pascal segundo",
-    "value": "Pa·s"
+    "code": "Pa·s"
   },
   {
     "name": "Quintal",
-    "value": "Qq"
+    "code": "Qq"
   },
   {
     "name": "radián",
-    "value": "Rad"
+    "code": "Rad"
   },
   {
     "name": "radián por segundo",
-    "value": "rad/s"
+    "code": "rad/s"
   },
   {
     "name": "radián por segundo cuadrado",
-    "value": "rad/s²"
+    "code": "rad/s²"
   },
   {
     "name": "Segundo",
-    "value": "S"
+    "code": "S"
   },
   {
     "name": "siemens",
-    "value": "s"
+    "code": "s"
   },
   {
     "name": "Servicios Profesionales",
-    "value": "Sp"
+    "code": "Sp"
   },
   {
     "name": "Servicios personales",
-    "value": "Spe"
+    "code": "Spe"
   },
   {
     "name": "estereorradián",
-    "value": "Sr"
+    "code": "Sr"
   },
   {
     "name": "Servicios técnicos",
-    "value": "St"
+    "code": "St"
   },
   {
     "name": "sievert",
-    "value": "Sv"
+    "code": "Sv"
   },
   {
     "name": "tesla",
-    "value": "t"
+    "code": "t"
   },
   {
     "name": "tonelada",
-    "value": "T"
+    "code": "T"
   },
   {
     "name": "unidad de masa atómica unificada",
-    "value": "U"
+    "code": "U"
   },
   {
     "name": "unidad astronómica",
-    "value": "Ua"
+    "code": "Ua"
   },
   {
     "name": "Unidad",
-    "value": "Unid"
+    "code": "Unid"
   },
   {
     "name": "volt",
-    "value": "V"
+    "code": "V"
   },
   {
     "name": "volt por metro",
-    "value": "V/m"
+    "code": "V/m"
   },
   {
     "name": "Watt",
-    "value": "W"
+    "code": "W"
   },
   {
     "name": "watt por metro kevin",
-    "value": "W/(m·K)"
+    "code": "W/(m·K)"
   },
   {
     "name": "watt por metro cuadrado estereorradián",
-    "value": "W/(m²·sr)"
+    "code": "W/(m²·sr)"
   },
   {
     "name": "watt por metro cuadrado",
-    "value": "W/m²"
+    "code": "W/m²"
   },
   {
     "name": "watt por estereorradián",
-    "value": "W/sr"
+    "code": "W/sr"
   },
   {
     "name": "weber",
-    "value": "Wb"
+    "code": "Wb"
   },
   {
     "name": "ohm",
-    "value": "Ω"
+    "code": "Ω"
   }
 ]

@@ -2,7 +2,6 @@
 
 namespace DazzaDev\DgtXmlGenerator\Models;
 
-use DazzaDev\DgtXmlGenerator\DataLoader;
 use DazzaDev\DgtXmlGenerator\DateValidator;
 use DazzaDev\DgtXmlGenerator\Models\Document\LineItem;
 use DazzaDev\DgtXmlGenerator\Models\Entities\Issuer;
@@ -12,11 +11,6 @@ use DazzaDev\DgtXmlGenerator\Models\Totals\Totals;
 
 class Document
 {
-    /**
-     * Document type
-     */
-    private DocumentType $documentType;
-
     /**
      * Sequential number
      */
@@ -119,24 +113,6 @@ class Document
         if (isset($data['totals'])) {
             $this->setTotals($data['totals']);
         }
-    }
-
-    /**
-     * Get document type
-     */
-    public function getDocumentType(): DocumentType
-    {
-        return $this->documentType;
-    }
-
-    /**
-     * Set document type
-     */
-    public function setDocumentType(string $documentTypeCode): void
-    {
-        $documentType = (new DataLoader('document-types'))->getByCode($documentTypeCode);
-
-        $this->documentType = new DocumentType($documentType);
     }
 
     /**
@@ -250,95 +226,20 @@ class Document
     }
 
     /**
-     * Get line items
-     *
-     * @return LineItem[]
-     */
-    public function getLineItems(): array
-    {
-        return $this->lineItems;
-    }
-
-    /**
-     * Set line items
-     */
-    public function setLineItems(array $lineItems): void
-    {
-        $this->lineItems = [];
-        foreach ($lineItems as $lineItem) {
-            $this->addLineItem($lineItem);
-        }
-    }
-
-    /**
-     * Add line item
-     */
-    public function addLineItem(array|LineItem $lineItem): void
-    {
-        $this->lineItems[] = $lineItem instanceof LineItem ? $lineItem : new LineItem($lineItem);
-    }
-
-    /**
-     * Get payments
-     *
-     * @return Payment[]
-     */
-    public function getPayments(): array
-    {
-        return $this->payments;
-    }
-
-    /**
-     * Set payments
-     */
-    public function setPayments(array $payments): void
-    {
-        $this->payments = [];
-        foreach ($payments as $payment) {
-            $this->addPayment($payment);
-        }
-    }
-
-    /**
-     * Add payment item
-     */
-    public function addPayment(array|Payment $payment): void
-    {
-        $this->payments[] = $payment instanceof Payment ? $payment : new Payment($payment);
-    }
-
-    /**
-     * Get totals
-     */
-    public function getTotals(): Totals
-    {
-        return $this->totals;
-    }
-
-    /**
-     * Set totals
-     */
-    public function setTotals(array|Totals $totals): void
-    {
-        $this->totals = $totals instanceof Totals ? $totals : new Totals($totals);
-    }
-
-    /**
      * Get array representation
      */
     public function toArray(): array
     {
         return [
-            'document_type' => $this->getDocumentType()->toArray(),
             'sequential' => $this->getSequential(),
             'date' => $this->getDate(),
             'establishment' => $this->getEstablishment(),
             'emission_point' => $this->getEmissionPoint(),
             'issuer' => $this->getIssuer()->toArray(),
             'receiver' => $this->getReceiver()->toArray(),
-            'line_items' => array_map(fn (LineItem $lineItem) => $lineItem->toArray(), $this->getLineItems()),
-            'payments' => array_map(fn (Payment $payment) => $payment->toArray(), $this->getPayments()),
-            'totals' => $this->getTotals()->toArray(),
+            // 'line_items' => array_map(fn (LineItem $lineItem) => $lineItem->toArray(), $this->getLineItems()),
+            // 'payments' => array_map(fn (Payment $payment) => $payment->toArray(), $this->getPayments()),
+            // 'summary' => $this->getSummary()->toArray(),
         ];
     }
 }
