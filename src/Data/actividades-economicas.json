@@ -905,5 +905,47 @@
   {
     "code": "4773.0",
     "name": "Otra venta al por menor de otros productos nuevos en comercios especializados"
+  },
+  {
+    "code": "4774.0",
+    "name": "Venta al por menor de artículos de segunda mano"
+  },
+  {
+    "code": "4781.0",
+    "name": "Venta al por menor en puestos de venta y mercados de: alimentos, bebidas y de productos del tabaco"
+  },
+  {
+    "code": "4799.0",
+    "name": "Otros tipos de venta al por menor no realizada en comercios, puestos de venta o mercados"
+  },
+  { "code": "4922.2", "name": "Servicios de taxi" },
+  { "code": "6419.0", "name": "Otros tipos de intermediación monetaria" },
+  {
+    "code": "6490.0",
+    "name": "Otras actividades de servicios financieros, excepto las de seguros y fondos de pensiones n.c.p"
+  },
+  { "code": "6530.0", "name": "Fondos de pensión" },
+  {
+    "code": "6619.0",
+    "name": "Otras actividades auxiliares a las actividades de servicios financieros"
+  },
+  {
+    "code": "6810.0",
+    "name": "Actividades inmobiliarias con bienes propios o arrendados"
+  },
+  { "code": "6910.0", "name": "Actividades jurídicas" },
+  {
+    "code": "6920.0",
+    "name": "Actividades de contabilidad, teneduría de libros y auditorías; consultoría fiscal"
+  },
+  {
+    "code": "7110.0",
+    "name": "Actividades de arquitectura e ingeniería y actividades conexas de consultoría técnica"
+  },
+  { "code": "7310.0", "name": "Publicidad" },
+  { "code": "7420.0", "name": "Actividades de fotografía" },
+  {
+    "code": "8411.0",
+    "name": "Actividades de la administración pública en general"
   }
 ]
