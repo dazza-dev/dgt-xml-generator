@@ -126,5 +126,42 @@
     "code": "2310.1",
     "name": "Fabricación de vidrio y de productos de vidrio"
   },
-  { "code": "2391.0", "name": "Fabricación de productos refractarios" }
+  { "code": "2391.0", "name": "Fabricación de productos refractarios" },
+  {
+    "code": "2392.0",
+    "name": "Fabricación de material de arcilla para la construcción"
+  },
+  {
+    "code": "2393.0",
+    "name": "Fabricación de otros productos de cerámica y porcelana"
+  },
+  {
+    "code": "2395.0",
+    "name": "Fabricación de artículos de hormigón, de cemento y de yeso"
+  },
+  { "code": "2396.0", "name": "Corte, tallado y acabado de la piedra" },
+  {
+    "code": "2399.0",
+    "name": "Fabricación de otros productos minerales no metálicos n.c.p"
+  },
+  { "code": "2410.0", "name": "Industrias básicas de hierro y acero" },
+  {
+    "code": "2420.0",
+    "name": "Fabricación de productos primarios de metales preciosos y metales no ferrosos"
+  },
+  { "code": "2431.0", "name": "Fundición de hierro y acero" },
+  { "code": "2432.0", "name": "Fundición de metales no ferrosos" },
+  {
+    "code": "2511.0",
+    "name": "Fabricación de productos metálicos para uso estructural"
+  },
+  {
+    "code": "2512.0",
+    "name": "Fabricación de tanques, depósitos y recipientes de metal"
+  },
+  {
+    "code": "2513.0",
+    "name": "Fabricación de los generadores del vapor, excepto calderas de agua caliente para calefacción central"
+  },
+  { "code": "2520.0", "name": "Fabricación de armas y municiones" }
 ]
