@@ -704,5 +704,62 @@
   },
   { "code": "4923.9", "name": "Otro transporte de carga n.c.p" },
   { "code": "5110.0", "name": "Transporte de pasajeros por vía aérea" },
-  { "code": "5221.2", "name": "Servicios de estacionamientos y garajes" }
+  { "code": "5221.2", "name": "Servicios de estacionamientos y garajes" },
+  {
+    "code": "5223.0",
+    "name": "Actividades de servicio secundario de transporte por vía aérea"
+  },
+  { "code": "5229.0", "name": "Otras actividades de apoyo al transporte" },
+  {
+    "code": "5510.1",
+    "name": "Actividades de alojamiento para estancias cortas en hoteles y moteles"
+  },
+  {
+    "code": "5610.1",
+    "name": "Actividades de restaurantes y de servicios móviles de comidas"
+  },
+  { "code": "6010.0", "name": "Transmisiones de radio" },
+  { "code": "6020.0", "name": "Programación y transmisión de televisión" },
+  { "code": "6110.0", "name": "Actividades de telecomunicaciones por cable" },
+  { "code": "6190.0", "name": "Otras actividades de telecomunicación" },
+  {
+    "code": "6310.0",
+    "name": "Procesamiento de datos, hospedaje y actividades conexas"
+  },
+  {
+    "code": "6492.0",
+    "name": "Fondos y sociedades de inversión y entidades financieras similares"
+  },
+  {
+    "code": "6611.0",
+    "name": "Corretaje de valores y de contratos de productos básicos"
+  },
+  {
+    "code": "6612.0",
+    "name": "Corretaje de valores y de contratos de productos básicos"
+  },
+  { "code": "6622.0", "name": "Actividades de agentes y corredores de seguro" },
+  { "code": "7120.0", "name": "Ensayos y análisis técnicos" },
+  {
+    "code": "7320.0",
+    "name": "Estudios de mercados y encuestas de opinión pública"
+  },
+  { "code": "7410.0", "name": "Actividades especializadas de diseño" },
+  {
+    "code": "7490.0",
+    "name": "Otras actividades profesionales, científicas y técnicas n.c.p"
+  },
+  { "code": "7500.0", "name": "Actividades veterinarias" },
+  {
+    "code": "7721.0",
+    "name": "Alquiler y arrendamiento de equipo recreativo y deportivo"
+  },
+  {
+    "code": "7729.0",
+    "name": "Alquiler y arrendamiento de otros efectos personales y enseres domésticos"
+  },
+  {
+    "code": "7730.0",
+    "name": "Alquiler y arrendamiento de otros tipos de maquinaria, equipo y bienes tangibles"
+  }
 ]
