@@ -1,0 +1,5 @@
+[
+  { "code": "01", "name": "Normal" },
+  { "code": "02", "name": "Contingencia" },
+  { "code": "03", "name": "Sin internet" }
+]
