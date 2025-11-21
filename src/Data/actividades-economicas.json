@@ -339,5 +339,33 @@
     "code": "4771.0",
     "name": "Venta al por menor de zapatos en comercios especializados"
   },
-  { "code": "4911.0", "name": "Transporte de pasajeros por ferrocarril" }
+  { "code": "4911.0", "name": "Transporte de pasajeros por ferrocarril" },
+  {
+    "code": "4921.0",
+    "name": "Transporte terrestre de pasajeros del área urbana, suburbana por vía terrestre"
+  },
+  {
+    "code": "4922.1",
+    "name": "Transporte terrestre de estudiantes y de empleados"
+  },
+  {
+    "code": "4922.3",
+    "name": "Transporte terrestre no regular de pasajeros, en buses"
+  },
+  {
+    "code": "4923.1",
+    "name": "Transporte terrestre local e internacional de contenedores"
+  },
+  { "code": "4930.0", "name": "Transporte por tuberías" },
+  { "code": "5012.0", "name": "Transporte marítimo y de cabotaje de carga" },
+  { "code": "5120.0", "name": "Transporte de carga por vía aérea" },
+  { "code": "5210.0", "name": "Almacenamiento y depósito" },
+  {
+    "code": "5221.1",
+    "name": "Remolque y asistencia para vehículo destinado al transporte terrestre"
+  },
+  {
+    "code": "5221.9",
+    "name": "Servicios de administración de carreteras, puentes y otros servicios auxiliares"
+  }
 ]
