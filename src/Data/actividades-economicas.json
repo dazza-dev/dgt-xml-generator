@@ -503,5 +503,16 @@
   {
     "code": "0111.9",
     "name": "Cultivo de cereales, legumbres y semillas oleaginosas n.c.p"
-  }
+  },
+  {
+    "code": "0113.9",
+    "name": "Cultivo de otras hortalizas, raíces o tubérculos n.c.p"
+  },
+  {
+    "code": "0127.9",
+    "name": "Cultivo de otras plantas con las que se preparan bebidas, excepto el cultivo de café n.c.p"
+  },
+  { "code": "0146.9", "name": "Cría de otras aves de corral, excepto pollos" },
+  { "code": "0161.2", "name": "Servicios de fumigación y riego agrícola" },
+  { "code": "0161.9", "name": "Otros servicios de apoyo a la agricultura" }
 ]
