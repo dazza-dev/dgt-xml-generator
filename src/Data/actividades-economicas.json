@@ -367,5 +367,141 @@
   {
     "code": "5221.9",
     "name": "Servicios de administración de carreteras, puentes y otros servicios auxiliares"
+  },
+  { "code": "5224.0", "name": "Manipulación de carga" },
+  { "code": "5310.0", "name": "Servicios postales (Correo)" },
+  {
+    "code": "5510.9",
+    "name": "Otras actividades de alojamiento para estancias cortas n.c.p"
+  },
+  { "code": "5590.0", "name": "Otras actividades de alojamientos" },
+  { "code": "5630.0", "name": "Actividades de servicio de bebidas" },
+  { "code": "5811.0", "name": "Edición de libros" },
+  { "code": "5813.0", "name": "Edición de periódicos, diarios y revistas" },
+  {
+    "code": "5911.0",
+    "name": "Actividades de producción de películas cinematográficas, videos y programas de televisión"
+  },
+  { "code": "5914.0", "name": "Actividades de proyección de películas" },
+  {
+    "code": "5920.0",
+    "name": "Actividades de grabación y publicación de grabaciones sonoras"
+  },
+  {
+    "code": "6120.0",
+    "name": "Actividades de telecomunicaciones inalámbricas"
+  },
+  { "code": "6201.0", "name": "Actividades de programación informática" },
+  {
+    "code": "6202.0",
+    "name": "Actividades de consultoría informática y gestión de instalaciones informáticas"
+  },
+  {
+    "code": "6209.0",
+    "name": "Otras actividades de la tecnología de información y servicio informáticos"
+  },
+  { "code": "6311.0", "name": "Actividades de agencias de noticias" },
+  { "code": "6411.0", "name": "Banca Central" },
+  { "code": "6491.0", "name": "Sociedades de cartera" },
+  {
+    "code": "6499.0",
+    "name": "Otras actividades de servicio financiero n.c.p"
+  },
+  { "code": "6511.0", "name": "Seguros generales" },
+  { "code": "6512.0", "name": "Seguro de vida" },
+  { "code": "6611.0", "name": "Administración de mercados financieros" },
+  {
+    "code": "6620.0",
+    "name": "Otras actividades auxiliares de seguros y fondos de pensiones"
+  },
+  {
+    "code": "6820.0",
+    "name": "Actividades inmobiliarias realizadas a cambio de una retribución o por contrato"
+  },
+  { "code": "7020.0", "name": "Actividades de consultoría en gestión" },
+  {
+    "code": "7210.0",
+    "name": "Investigación y desarrollo experimental en el campo de las ciencias naturales y la ingeniería"
+  },
+  {
+    "code": "7220.0",
+    "name": "Investigación y desarrollo experimental en el campo de las ciencias sociales y las humanidades"
+  },
+  { "code": "7710.1", "name": "Alquiler de automóviles sin conductor" },
+  { "code": "7722.0", "name": "Alquiler de cintas de video y discos" },
+  {
+    "code": "7830.0",
+    "name": "Otras actividades de dotación de recursos humanos"
+  },
+  { "code": "7910.0", "name": "Actividades de agencias de viajes" },
+  {
+    "code": "8110.0",
+    "name": "Actividades combinadas de apoyo a instalaciones"
+  },
+  { "code": "8121.0", "name": "Limpieza general de edificios" },
+  {
+    "code": "8129.0",
+    "name": "Otras actividades de limpieza de edificios e instalaciones industriales"
+  },
+  {
+    "code": "8130.0",
+    "name": "Actividades de paisajismo y servicios de mantenimiento conexos"
+  },
+  { "code": "8210.0", "name": "Actividades de centros de llamadas" },
+  { "code": "8292.0", "name": "Actividades de envasado y empacado" },
+  {
+    "code": "8299.0",
+    "name": "Otras actividades de servicios de apoyo a las empresas n.c.p"
+  },
+  { "code": "8410.1", "name": "Relaciones exteriores" },
+  {
+    "code": "8430.0",
+    "name": "Actividades de planes de seguridad social de afiliación obligatoria"
+  },
+  { "code": "8520.2", "name": "Enseñanza de formación técnica y profesional" },
+  { "code": "8530.2", "name": "Enseñanza parauniversitaria" },
+  { "code": "8620.2", "name": "Actividades de odontólogos" },
+  {
+    "code": "8720.0",
+    "name": "Actividades de atención en instituciones para personas con retraso mental, enfermos mentales y toxicómanos"
+  },
+  {
+    "code": "8810.0",
+    "name": "Asistencia social sin alojamiento para el adulto mayor y personas con discapacidad"
+  },
+  { "code": "9101.0", "name": "Actividades de Bibliotecas y archivos" },
+  {
+    "code": "9102.0",
+    "name": "Actividades de museos y preservación de lugares históricos"
+  },
+  {
+    "code": "9103.0",
+    "name": "Actividades de jardines botánicos, zoológicos y parques naturales"
+  },
+  { "code": "9491.0", "name": "Actividades de asociaciones profesionales" },
+  { "code": "9492.1", "name": "Actividades de organizaciones religiosas" },
+  { "code": "9492.9", "name": "Actividades de organizaciones religiosas" },
+  { "code": "9499.0", "name": "Actividades de otras asociaciones n.c.p" },
+  { "code": "9512.0", "name": "Reparación de equipos de comunicaciones" },
+  {
+    "code": "9521.0",
+    "name": "Reparación de aparatos electrónicos de consumo eléctrico"
+  },
+  {
+    "code": "9522.0",
+    "name": "Reparación de aparatos de uso doméstico y equipo doméstico y de jardinería"
+  },
+  { "code": "9523.0", "name": "Reparación de calzado y artículos de cuero" },
+  {
+    "code": "9602.0",
+    "name": "Actividades de peluquería y otros tratamientos de belleza"
+  },
+  {
+    "code": "9700.0",
+    "name": "Actividades de los hogares como empleadores de personal doméstico"
+  },
+  {
+    "code": "0111.9",
+    "name": "Cultivo de cereales, legumbres y semillas oleaginosas n.c.p"
   }
 ]
