@@ -174,13 +174,11 @@ abstract class EntityBase
     /**
      * Set activity
      */
-    public function setActivity(Activity|array $activity): void
+    public function setActivity(int|string $activityCode): void
     {
-        if (is_array($activity)) {
-            $activity = new Activity($activity);
-        }
+        $activity = (new DataLoader('actividades-economicas'))->getByCode($activityCode);
 
-        $this->activity = $activity;
+        $this->activity = new Activity($activity);
     }
 
     /**
