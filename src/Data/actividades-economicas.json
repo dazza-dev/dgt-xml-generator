@@ -163,5 +163,181 @@
     "code": "2513.0",
     "name": "Fabricación de los generadores del vapor, excepto calderas de agua caliente para calefacción central"
   },
-  { "code": "2520.0", "name": "Fabricación de armas y municiones" }
+  { "code": "2520.0", "name": "Fabricación de armas y municiones" },
+  { "code": "2630.0", "name": "Fabricación de equipos de comunicaciones" },
+  {
+    "code": "2651.0",
+    "name": "Fabricación de equipos de medición, prueba, verificación, navegación y de equipo de control"
+  },
+  { "code": "2652.0", "name": "Fabricación de relojes" },
+  {
+    "code": "2670.0",
+    "name": "Fabricación de instrumentos ópticos de equipo fotográfico"
+  },
+  { "code": "2720.0", "name": "Fabricación de baterías y acumuladores" },
+  {
+    "code": "2732.0",
+    "name": "Fabricación de otros hilos y cables eléctricos"
+  },
+  {
+    "code": "2740.0",
+    "name": "Fabricación de equipos de iluminación eléctricos"
+  },
+  { "code": "2750.0", "name": "Fabricación de aparatos de uso doméstico" },
+  { "code": "2790.0", "name": "Fabricación de otro equipo eléctrico" },
+  {
+    "code": "2811.0",
+    "name": "Fabricación de motores y turbinas, excepto motores para aeronaves, vehículos automotores y motocicletas"
+  },
+  {
+    "code": "2813.0",
+    "name": "Fabricación de otras bombas, compresores, grifos y válvulas"
+  },
+  { "code": "2814.0", "name": "Fabricación de hornos, hogares y quemadores" },
+  {
+    "code": "2817.0",
+    "name": "Fabricación de maquinaria y equipo de oficina (excepto computadoras y equipos periféricos)"
+  },
+  {
+    "code": "2831.0",
+    "name": "Fabricación de maquinaria agropecuaria y forestal"
+  },
+  {
+    "code": "2840.0",
+    "name": "Fabricación de maquinarias para la conformación de metales y de máquinas herramientas"
+  },
+  {
+    "code": "2860.0",
+    "name": "Fabricación de maquinaria para explotación de minas y canteras y para obras de construcción"
+  },
+  {
+    "code": "2891.0",
+    "name": "Fabricación de maquinaria para la elaboración de alimentos, bebidas y tabaco"
+  },
+  {
+    "code": "2893.0",
+    "name": "Fabricación de maquinaria para la elaboración de productos textiles, prendas de vestir y cueros"
+  },
+  {
+    "code": "2899.0",
+    "name": "Fabricación de otros tipos de maquinaria de uso especial"
+  },
+  { "code": "2910.0", "name": "Fabricación de vehículos automotores" },
+  {
+    "code": "2930.0",
+    "name": "Fabricación de partes y accesorios para motores de vehículos"
+  },
+  {
+    "code": "3012.0",
+    "name": "Construcción de embarcaciones de recreo y deporte"
+  },
+  {
+    "code": "3020.0",
+    "name": "Fabricación de locomotoras y de material rodante"
+  },
+  {
+    "code": "3030.0",
+    "name": "Fabricación de aeronaves y naves espaciales y de maquinaria conexa"
+  },
+  { "code": "3040.0", "name": "Fabricación de vehículos militares de combate" },
+  {
+    "code": "3092.0",
+    "name": "Fabricación de bicicletas y sillas de ruedas para personas con discapacidad"
+  },
+  {
+    "code": "3099.0",
+    "name": "Fabricación de otro equipo de transporte n.c.p"
+  },
+  {
+    "code": "3109.0",
+    "name": "Fabricación de muebles de otro tipo de material (excepto de madera, piedra, cemento o cerámica)"
+  },
+  { "code": "3211.0", "name": "Fabricación de joyas y artículos conexos" },
+  { "code": "3212.0", "name": "Fabricación de bisutería y artículos conexos" },
+  { "code": "3220.0", "name": "Fabricación de instrumentos musicales" },
+  { "code": "3230.0", "name": "Fabricación de artículos de deporte" },
+  { "code": "3240.0", "name": "Fabricación de juegos y juguetes" },
+  { "code": "3311.0", "name": "Reparación de productos elaborados de metal" },
+  { "code": "3312.0", "name": "Reparación de equipo eléctrico" },
+  {
+    "code": "3315.0",
+    "name": "Reparación de equipo de transporte, excepto los vehículos automotores"
+  },
+  {
+    "code": "3520.0",
+    "name": "Fabricación de gas; distribución de combustibles gaseosos por tuberías"
+  },
+  { "code": "3811.0", "name": "Recolección de desechos no peligrosos" },
+  { "code": "4100.0", "name": "Construcción de edificios" },
+  { "code": "4210.0", "name": "Construcción de carreteras y vías férreas" },
+  { "code": "4310.0", "name": "Preparación del terreno" },
+  {
+    "code": "4610.0",
+    "name": "Venta al por mayor a cambio de una retribución o por contrato"
+  },
+  {
+    "code": "4641.0",
+    "name": "Venta al por mayor de productos textiles y prendas de vestir"
+  },
+  {
+    "code": "4649.0",
+    "name": "Venta al por mayor de aparatos, artículos y equipo de uso doméstico"
+  },
+  {
+    "code": "4651.0",
+    "name": "Venta al por mayor de computadoras, equipo informático periférico y programas informáticos"
+  },
+  {
+    "code": "4652.0",
+    "name": "Venta al por mayor de equipo, partes y piezas electrónicas y de telecomunicaciones"
+  },
+  {
+    "code": "4662.0",
+    "name": "Venta al por mayor de metales y de minerales metáferos"
+  },
+  {
+    "code": "4669.0",
+    "name": "Venta al por mayor de fertilizantes y productos agroquímicos"
+  },
+  {
+    "code": "4711.0",
+    "name": "Venta al por menor en supermercados, almacenes y similares"
+  },
+  {
+    "code": "4719.0",
+    "name": "Venta al por menor en tiendas por departamentos"
+  },
+  {
+    "code": "4719.9",
+    "name": "Venta al por menor en bazares y otros establecimientos no especializados n.c.p"
+  },
+  {
+    "code": "4723.0",
+    "name": "Venta al por menor de tabaco en comercios especializados"
+  },
+  {
+    "code": "4742.0",
+    "name": "Venta al por menor de audio y video en comercios especializados"
+  },
+  {
+    "code": "4752.0",
+    "name": "Venta al por menor de productos de vidrio en comercios especializados"
+  },
+  {
+    "code": "4753.0",
+    "name": "Venta al por menor de tapices, alfombras, cubrimientos para paredes y pisos en comercios especializados"
+  },
+  {
+    "code": "4764.0",
+    "name": "Venta al por menor de juguetes en almacenes especializados"
+  },
+  {
+    "code": "4764.1",
+    "name": "Venta al por menor de juegos y juguetes en almacenes especializados"
+  },
+  {
+    "code": "4771.0",
+    "name": "Venta al por menor de zapatos en comercios especializados"
+  },
+  { "code": "4911.0", "name": "Transporte de pasajeros por ferrocarril" }
 ]
