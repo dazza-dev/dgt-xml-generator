@@ -28,6 +28,11 @@ class Document
     private ?Situation $situation = null;
 
     /**
+     * SaleCondition
+     */
+    private ?SaleCondition $saleCondition = null;
+
+    /**
      * Establishment information
      */
     public string $establishment = '';
@@ -62,9 +67,9 @@ class Document
     private array $payments = [];
 
     /**
-     * Totals information
+     * Summary information
      */
-    private Totals $totals;
+    private Summary $summary;
 
     /**
      * Document constructor
@@ -94,9 +99,10 @@ class Document
         $this->setDate($data['date']);
 
         // Situation
-        if (isset($data['situation'])) {
-            $this->setSituation($data['situation']);
-        }
+        $this->setSituation($data['situation']);
+
+        // SaleCondition
+        $this->setSaleCondition($data['sale_condition']);
 
         // Establishment
         $this->setEstablishment($data['establishment']);
@@ -111,7 +117,7 @@ class Document
         $this->setReceiver($data['receiver']);
 
         // Line items
-        if (isset($data['line_items'])) {
+        /*if (isset($data['line_items'])) {
             $this->setLineItems($data['line_items']);
         }
 
@@ -123,7 +129,7 @@ class Document
         // Totals
         if (isset($data['totals'])) {
             $this->setTotals($data['totals']);
-        }
+        }*/
     }
 
     /**
@@ -188,6 +194,24 @@ class Document
         $situation = (new DataLoader('situacion-comprobantes'))->getByCode($situationCode);
 
         $this->situation = new Situation($situation);
+    }
+
+    /**
+     * Get condition
+     */
+    public function getSaleCondition(): ?SaleCondition
+    {
+        return $this->saleCondition;
+    }
+
+    /**
+     * Set condition
+     */
+    public function setSaleCondition(int|string $conditionCode): void
+    {
+        $condition = (new DataLoader('condiciones-venta'))->getByCode($conditionCode);
+
+        $this->saleCondition = new SaleCondition($condition);
     }
 
     /**
@@ -263,6 +287,7 @@ class Document
             'sequential' => $this->getSequential(),
             'date' => $this->getDate(),
             'situation' => $this->getSituation()?->toArray(),
+            'sale_condition' => $this->getSaleCondition()?->toArray(),
             'establishment' => $this->getEstablishment(),
             'emission_point' => $this->getEmissionPoint(),
             'issuer' => $this->getIssuer()->toArray(),
