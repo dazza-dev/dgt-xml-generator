@@ -701,5 +701,8 @@
   {
     "code": "4772.0",
     "name": "Venta al por menor de productos farmacéuticos y medicinales, cosméticos y artículos de tocador en comercios especializados"
-  }
+  },
+  { "code": "4923.9", "name": "Otro transporte de carga n.c.p" },
+  { "code": "5110.0", "name": "Transporte de pasajeros por vía aérea" },
+  { "code": "5221.2", "name": "Servicios de estacionamientos y garajes" }
 ]
