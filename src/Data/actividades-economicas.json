@@ -823,5 +823,87 @@
   {
     "code": "9601.0",
     "name": "Lavado y limpieza, incluida la limpieza en seco, de productos textiles y piel"
+  },
+  {
+    "code": "9609.0",
+    "name": "Otras actividades de servicios personales n.c.p"
+  },
+  {
+    "code": "9900.0",
+    "name": "Actividades de organizaciones y órganos extraterritoriales"
+  },
+  { "code": "0130.0", "name": "Propagación de plantas" },
+  { "code": "0149.0", "name": "Cría de otros animales" },
+  { "code": "0311.0", "name": "Pesca marítima" },
+  {
+    "code": "1010.1",
+    "name": "Elaboración y conservación de carne y embutidos de ganado vacuno y porcino"
+  },
+  {
+    "code": "1071.0",
+    "name": "Elaboración de productos de panadería, excepto elaboración de galletas"
+  },
+  {
+    "code": "1079.0",
+    "name": "Elaboración de otros productos de panadería, excepto elaboración de galletas"
+  },
+  {
+    "code": "1101.0",
+    "name": "Destilación, rectificación y mezcla de bebidas alcohólicas"
+  },
+  { "code": "1103.0", "name": "Elaboración de bebidas malteadas y de malta" },
+  { "code": "1811.0", "name": "Impresión" },
+  {
+    "code": "1812.0",
+    "name": "Actividades de servicios relacionados con la impresión"
+  },
+  {
+    "code": "1920.0",
+    "name": "Fabricación de productos de la refinación del petróleo"
+  },
+  {
+    "code": "2022.0",
+    "name": "Fabricación de pinturas, barnices y productos de revestimiento similares, tintas de imprenta y masillas"
+  },
+  {
+    "code": "2023.1",
+    "name": "Fabricación de jabones y detergentes, preparados para limpiar y pulir"
+  },
+  {
+    "code": "2211.0",
+    "name": "Fabricación de cubiertas y cámaras de caucho; recauchado y renovación de cubiertas de caucho"
+  },
+  { "code": "2394.0", "name": "Fabricación de cemento, de la cal y del yeso" },
+  {
+    "code": "2920.0",
+    "name": "Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semirremolques"
+  },
+  {
+    "code": "3250.0",
+    "name": "Fabricación de instrumentos y suministros médicos y odontológicos"
+  },
+  {
+    "code": "3250.1",
+    "name": "Fabricación de instrumentos y suministros médicos y odontológicos"
+  },
+  {
+    "code": "4390.0",
+    "name": "Otras actividades especializadas de la construcción"
+  },
+  {
+    "code": "4540.0",
+    "name": "Venta, mantenimiento y reparación de motocicletas y de sus partes, piezas y accesorios"
+  },
+  {
+    "code": "4730.0",
+    "name": "Venta al por menor de combustibles para vehículos automotores en comercios especializados"
+  },
+  {
+    "code": "4741.0",
+    "name": "Venta al por menor de computadoras, equipo periféricos, programas de información y telecomunicaciones en comercios especializados"
+  },
+  {
+    "code": "4773.0",
+    "name": "Otra venta al por menor de otros productos nuevos en comercios especializados"
   }
 ]
