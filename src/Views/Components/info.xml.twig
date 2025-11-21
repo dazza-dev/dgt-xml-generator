@@ -3,3 +3,12 @@
 <CodigoActividadEmisor>{{ issuer.activity.code }}</CodigoActividadEmisor>
 <NumeroConsecutivo>00100001010000000008</NumeroConsecutivo>
 <FechaEmision>{{ date }}</FechaEmision>
+{% include 'Components/entity.xml.twig' with { 'entity': issuer, node: 'Emisor'
+} %} {% include 'Components/entity.xml.twig' with { 'entity': receiver, node:
+'Receptor' } %}
+<CondicionVenta>{{ sale_condition.code }}</CondicionVenta>
+{% if sale_condition.code == '99' %}
+<CondicionVentaOtros>{{ sale_condition_details }}</CondicionVentaOtros>
+{% endif %} {% if credit_term %}
+<PlazoCredito>{{ credit_term }}</PlazoCredito>
+{% endif %}

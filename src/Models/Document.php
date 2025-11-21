@@ -33,6 +33,11 @@ class Document
     private ?SaleCondition $saleCondition = null;
 
     /**
+     * Sale condition details
+     */
+    private ?string $saleConditionDetails = null;
+
+    /**
      * Establishment information
      */
     public string $establishment = '';
@@ -215,6 +220,22 @@ class Document
     }
 
     /**
+     * Get sale condition details
+     */
+    public function getSaleConditionDetails(): ?string
+    {
+        return $this->saleConditionDetails;
+    }
+
+    /**
+     * Set sale condition details
+     */
+    public function setSaleConditionDetails(string $saleConditionDetails): void
+    {
+        $this->saleConditionDetails = $saleConditionDetails;
+    }
+
+    /**
      * Get establishment
      */
     public function getEstablishment(): string
@@ -288,6 +309,7 @@ class Document
             'date' => $this->getDate(),
             'situation' => $this->getSituation()?->toArray(),
             'sale_condition' => $this->getSaleCondition()?->toArray(),
+            'sale_condition_details' => $this->getSaleConditionDetails(),
             'establishment' => $this->getEstablishment(),
             'emission_point' => $this->getEmissionPoint(),
             'issuer' => $this->getIssuer()->toArray(),

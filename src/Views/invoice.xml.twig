@@ -4,9 +4,6 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.4/facturaElectronica"
 >
-  {% include 'Components/info.xml.twig' %} {% include
-  'Components/entity.xml.twig' with { 'entity': issuer, node: 'Emisor' } %} {%
-  include 'Components/entity.xml.twig' with { 'entity': receiver, node:
-  'Receptor' } %}
+  {% include 'Components/info.xml.twig' %}
 </FacturaElectronica>
 {% endapply %}
