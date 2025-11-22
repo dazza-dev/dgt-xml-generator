@@ -25,6 +25,11 @@ class LineItem
     protected float $unitPrice = 0.0;
 
     /**
+     * Customs Tariff Code
+     */
+    protected ?string $customsTariffCode = null;
+
+    /**
      * LineItem constructor
      *
      * @param  array  $data  LineItem data
@@ -41,6 +46,10 @@ class LineItem
     {
         if (empty($data)) {
             return;
+        }
+
+        if (isset($data['customs_tariff_code'])) {
+            $this->setCustomsTariffCode($data['customs_tariff_code']);
         }
 
         if (isset($data['cabys_code'])) {
@@ -125,12 +134,29 @@ class LineItem
     }
 
     /**
+     * Get Customs Tariff Code
+     */
+    public function getCustomsTariffCode(): ?string
+    {
+        return $this->customsTariffCode;
+    }
+
+    /**
+     * Set Customs Tariff Code
+     */
+    public function setCustomsTariffCode(string $customsTariffCode): void
+    {
+        $this->customsTariffCode = $customsTariffCode;
+    }
+
+    /**
      * Convert to array for XML generation
      */
     public function toArray(): array
     {
         return [
             'cabys_code' => $this->getCabysCode(),
+            'customs_tariff_code' => $this->getCustomsTariffCode(),
             'description' => $this->getDescription(),
             'quantity' => $this->getQuantity(),
             'unit_price' => $this->getUnitPrice(),

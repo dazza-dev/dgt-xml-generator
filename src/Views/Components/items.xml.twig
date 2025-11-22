@@ -2,6 +2,9 @@
   {% for item in line_items %}
   <LineaDetalle>
     <NumeroLinea>{{ loop.index }}</NumeroLinea>
+    {% if item.customs_tariff_code %}
+    <PartidaArancelaria>{{ item.customs_tariff_code }}</PartidaArancelaria>
+    {% endif %}
     <CodigoCABYS>{{ item.cabys_code }}</CodigoCABYS>
     <CodigoComercial>
       <Tipo>04</Tipo>
