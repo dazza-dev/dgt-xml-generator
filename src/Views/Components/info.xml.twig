@@ -1,6 +1,9 @@
 <Clave>50620112500310292594400100001010000000008199999999</Clave>
 <ProveedorSistemas>{{ issuer.identification_number }}</ProveedorSistemas>
 <CodigoActividadEmisor>{{ issuer.activity.code }}</CodigoActividadEmisor>
+{% if receiver.activity.code %}
+<CodigoActividadReceptor>{{ receiver.activity.code }}</CodigoActividadReceptor>
+{% endif %}
 <NumeroConsecutivo>00100001010000000008</NumeroConsecutivo>
 <FechaEmision>{{ date }}</FechaEmision>
 {% include 'Components/entity.xml.twig' with { 'entity': issuer, node: 'Emisor'
