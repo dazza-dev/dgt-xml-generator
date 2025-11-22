@@ -215,6 +215,14 @@ class Document
     }
 
     /**
+     * Get date parts in two digits
+     */
+    public function getTwoDigitDateParts(): string
+    {
+        return (new DateValidator)->getTwoDigitDateParts($this->date);
+    }
+
+    /**
      * Get establishment
      */
     public function getEstablishment(): int
@@ -297,10 +305,11 @@ class Document
     public function getDocumentKey(): string
     {
         $sequentialNumber = $this->getSequentialNumber();
+        $dateParts = $this->getTwoDigitDateParts();
         $situation = $this->getSituation()->getCode();
         $securityKey = $this->getSecurityKey();
 
-        return 506 .$sequentialNumber.$situation.$securityKey;
+        return 506 .$sequentialNumber.$dateParts['day'].$dateParts['month'].$dateParts['year'].$situation.$securityKey;
     }
 
     /**
