@@ -305,11 +305,12 @@ class Document
     public function getDocumentKey(): string
     {
         $sequentialNumber = $this->getSequentialNumber();
+        $identificationNumber = $this->getIssuer()->getIdentificationNumber();
         $dateParts = $this->getTwoDigitDateParts();
         $situation = $this->getSituation()->getCode();
         $securityKey = $this->getSecurityKey();
 
-        return 506 .$sequentialNumber.$dateParts['day'].$dateParts['month'].$dateParts['year'].$situation.$securityKey;
+        return 506 .$dateParts['day'].$dateParts['month'].$dateParts['year'].$identificationNumber.$sequentialNumber.$situation.$securityKey;
     }
 
     /**
