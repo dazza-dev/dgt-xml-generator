@@ -35,8 +35,8 @@ class Currency
             return;
         }
 
-        if (isset($data['currency'])) {
-            $this->setCurrency($data['currency']);
+        if (isset($data['currency_code'])) {
+            $this->setCurrency($data['currency_code']);
         }
 
         if (isset($data['exchange_rate'])) {
@@ -57,7 +57,7 @@ class Currency
      */
     public function setCurrency(string $currencyCode = 'CRC'): void
     {
-        $this->currency = (new DataLoader('tipos-comprobante'))->getByCode($currencyCode);
+        $this->currency = (new DataLoader('monedas'))->getByCode($currencyCode);
     }
 
     /**
@@ -82,7 +82,7 @@ class Currency
     public function toArray(): array
     {
         return [
-            'currency' => $this->getCurrency(),
+            'currency_code' => $this->getCurrency()['code'],
             'exchange_rate' => $this->getExchangeRate(),
         ];
     }
