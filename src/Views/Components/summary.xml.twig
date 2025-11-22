@@ -3,11 +3,17 @@
     <CodigoMoneda>USD</CodigoMoneda>
     <TipoCambio>504.73</TipoCambio>
   </CodigoTipoMoneda>
-  <TotalServGravados>50.00000</TotalServGravados>
-  <TotalServExentos>0</TotalServExentos>
-  <TotalServExonerado>0</TotalServExonerado>
-  <TotalServNoSujeto>0</TotalServNoSujeto>
-  <TotalMercanciasGravadas>0</TotalMercanciasGravadas>
+  <TotalServGravados>{{ summary.total_taxed_services }}</TotalServGravados>
+  <TotalServExentos>{{ summary.total_exempt_services }}</TotalServExentos>
+  <TotalServExonerado>{{
+    summary.total_exonerated_services
+  }}</TotalServExonerado>
+  <TotalServNoSujeto>{{
+    summary.total_non_taxable_services
+  }}</TotalServNoSujeto>
+  <TotalMercanciasGravadas>{{
+    summary.total_taxed_goods
+  }}</TotalMercanciasGravadas>
   <TotalMercanciasExentas>0</TotalMercanciasExentas>
   <TotalMercExonerada>0</TotalMercExonerada>
   <TotalMercNoSujeta>0</TotalMercNoSujeta>
