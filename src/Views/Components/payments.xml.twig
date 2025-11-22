@@ -1,13 +1,9 @@
-<pagos>
-  {% for payment in payments %}
-  <pago>
-    <formaPago>{{ payment.payment_method.code }}</formaPago>
-    <total>{{ payment.amount }}</total>
-    {% if payment.term %}
-    <plazo>{{ payment.term }}</plazo>
-    {% endif %} {% if payment.unit_time %}
-    <unidadTiempo>{{ payment.unit_time }}</unidadTiempo>
-    {% endif %}
-  </pago>
-  {% endfor %}
-</pagos>
+{% for payment in payments %}
+<MedioPago>
+  <TipoMedioPago>{{ payment.payment_method.code }}</TipoMedioPago>
+  {% endif %} {% if payment.other_payment_method %}
+  <MedioPagoOtros>{{ payment.other_payment_method }}</MedioPagoOtros>
+  {% endif %}
+  <TotalMedioPago>{{ payment.amount }}</TotalMedioPago>
+</MedioPago>
+{% endfor %}

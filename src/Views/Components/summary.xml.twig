@@ -32,9 +32,6 @@
     <TotalMontoImpuesto>6.5</TotalMontoImpuesto>
   </TotalDesgloseImpuesto>
   <TotalImpuesto>{{ summary.total_tax }}</TotalImpuesto>
-  <MedioPago>
-    <TipoMedioPago>04</TipoMedioPago>
-    <TotalMedioPago>56.50000</TotalMedioPago>
-  </MedioPago>
+  {% include 'Components/payments.xml.twig' %}
   <TotalComprobante>{{ summary.total_voucher }}</TotalComprobante>
 </ResumenFactura>
