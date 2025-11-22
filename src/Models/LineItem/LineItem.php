@@ -62,6 +62,11 @@ class LineItem
     protected ?string $medicationRegistration = null;
 
     /**
+     * Pharmaceutical Form
+     */
+    protected ?PharmaceuticalForm $pharmaceuticalForm = null;
+
+    /**
      * LineItem constructor
      *
      * @param  array  $data  LineItem data
@@ -122,6 +127,10 @@ class LineItem
 
         if (isset($data['medication_registration'])) {
             $this->setMedicationRegistration($data['medication_registration']);
+        }
+
+        if (isset($data['pharmaceutical_form'])) {
+            $this->setPharmaceuticalForm($data['pharmaceutical_form']);
         }
     }
 
@@ -342,6 +351,29 @@ class LineItem
     }
 
     /**
+     * Get Pharmaceutical Form
+     */
+    public function getPharmaceuticalForm(): ?PharmaceuticalForm
+    {
+        return $this->pharmaceuticalForm;
+    }
+
+    /**
+     * Set Pharmaceutical Form
+     */
+    public function setPharmaceuticalForm(PharmaceuticalForm|array|string $form): void
+    {
+        if (is_array($form)) {
+            $this->pharmaceuticalForm = new PharmaceuticalForm($form);
+        } elseif (is_string($form)) {
+            $data = (new DataLoader('formas-farmaceuticas'))->getByCode($form);
+            $this->pharmaceuticalForm = new PharmaceuticalForm($data);
+        } else {
+            $this->pharmaceuticalForm = $form;
+        }
+    }
+
+    /**
      * Convert to array for XML generation
      */
     public function toArray(): array
@@ -355,6 +387,7 @@ class LineItem
             'transaction_type' => $this->getTransactionType()?->toArray(),
             'vin_or_serial_numbers' => $this->getVinOrSerialNumbers(),
             'medication_registration' => $this->getMedicationRegistration(),
+            'pharmaceutical_form' => $this->getPharmaceuticalForm()?->toArray(),
             'description' => $this->getDescription(),
             'quantity' => $this->getQuantity(),
             'unit_price' => $this->getUnitPrice(),
