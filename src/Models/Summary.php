@@ -15,6 +15,21 @@ class Summary
     private ?float $totalExemptServices = null;
 
     /**
+     * Total servicios exonerados del IVA
+     */
+    private ?float $totalExoneratedServices = null;
+
+    /**
+     * Total servicios No Sujetos de IVA
+     */
+    private ?float $totalNonTaxableServices = null;
+
+    /**
+     * Total mercancías gravadas con IVA
+     */
+    private ?float $totalTaxedGoods = null;
+
+    /**
      * Summary constructor
      *
      * @param  array  $data  Summary data
@@ -40,12 +55,24 @@ class Summary
         if (isset($data['total_exempt_services'])) {
             $this->setTotalExemptServices($data['total_exempt_services']);
         }
+
+        if (isset($data['total_exonerated_services'])) {
+            $this->setTotalExoneratedServices($data['total_exonerated_services']);
+        }
+
+        if (isset($data['total_non_taxable_services'])) {
+            $this->setTotalNonTaxableServices($data['total_non_taxable_services']);
+        }
+
+        if (isset($data['total_taxed_goods'])) {
+            $this->setTotalTaxedGoods($data['total_taxed_goods']);
+        }
     }
 
     /**
      * Get total taxed services
      */
-    public function getTotalTaxedServices(): ?string
+    public function getTotalTaxedServices(): ?float
     {
         return $this->totalTaxedServices;
     }
@@ -75,6 +102,54 @@ class Summary
     }
 
     /**
+     * Get total exonerated services
+     */
+    public function getTotalExoneratedServices(): ?float
+    {
+        return $this->totalExoneratedServices;
+    }
+
+    /**
+     * Set total exonerated services
+     */
+    public function setTotalExoneratedServices(float $totalExoneratedServices): void
+    {
+        $this->totalExoneratedServices = $totalExoneratedServices;
+    }
+
+    /**
+     * Get total non taxable services
+     */
+    public function getTotalNonTaxableServices(): ?float
+    {
+        return $this->totalNonTaxableServices;
+    }
+
+    /**
+     * Set total non taxable services
+     */
+    public function setTotalNonTaxableServices(float $totalNonTaxableServices): void
+    {
+        $this->totalNonTaxableServices = $totalNonTaxableServices;
+    }
+
+    /**
+     * Get total taxed goods
+     */
+    public function getTotalTaxedGoods(): ?float
+    {
+        return $this->totalTaxedGoods;
+    }
+
+    /**
+     * Set total taxed goods
+     */
+    public function setTotalTaxedGoods(float $totalTaxedGoods): void
+    {
+        $this->totalTaxedGoods = $totalTaxedGoods;
+    }
+
+    /**
      * Convert model to array
      */
     public function toArray(): array
@@ -82,6 +157,9 @@ class Summary
         return [
             'total_taxed_services' => $this->getTotalTaxedServices(),
             'total_exempt_services' => $this->getTotalExemptServices(),
+            'total_exonerated_services' => $this->getTotalExoneratedServices(),
+            'total_non_taxable_services' => $this->getTotalNonTaxableServices(),
+            'total_taxed_goods' => $this->getTotalTaxedGoods(),
         ];
     }
 }
