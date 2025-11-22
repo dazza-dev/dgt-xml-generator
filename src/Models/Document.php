@@ -8,7 +8,6 @@ use DazzaDev\DgtXmlGenerator\Models\Document\LineItem;
 use DazzaDev\DgtXmlGenerator\Models\Entities\Issuer;
 use DazzaDev\DgtXmlGenerator\Models\Entities\Receiver;
 use DazzaDev\DgtXmlGenerator\Models\Payment\Payment;
-use DazzaDev\DgtXmlGenerator\Models\Totals\Totals;
 
 class Document
 {
@@ -124,17 +123,15 @@ class Document
         // Line items
         /*if (isset($data['line_items'])) {
             $this->setLineItems($data['line_items']);
-        }
+        }*/
 
         // Payments
         if (isset($data['payments'])) {
             $this->setPayments($data['payments']);
         }
 
-        // Totals
-        if (isset($data['totals'])) {
-            $this->setTotals($data['totals']);
-        }*/
+        // Summary
+        $this->setSummary($data['summary']);
     }
 
     /**
@@ -389,8 +386,8 @@ class Document
             'issuer' => $this->getIssuer()->toArray(),
             'receiver' => $this->getReceiver()->toArray(),
             // 'line_items' => array_map(fn (LineItem $lineItem) => $lineItem->toArray(), $this->getLineItems()),
-            // 'payments' => array_map(fn (Payment $payment) => $payment->toArray(), $this->getPayments()),
-            // 'summary' => $this->getSummary()->toArray(),
+            'payments' => array_map(fn (Payment $payment) => $payment->toArray(), $this->getPayments()),
+            'summary' => $this->getSummary()->toArray(),
         ];
     }
 }

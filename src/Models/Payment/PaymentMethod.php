@@ -1,8 +1,8 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models\Payment;
+namespace DazzaDev\DgtXmlGenerator\Models\Payment;
 
-use DazzaDev\SriXmlGenerator\Models\BaseModel;
+use DazzaDev\DgtXmlGenerator\Models\BaseModel;
 
 class PaymentMethod extends BaseModel
 {
