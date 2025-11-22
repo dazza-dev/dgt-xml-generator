@@ -7,11 +7,11 @@
       <Tipo>04</Tipo>
       <Codigo>1</Codigo>
     </CodigoComercial>
-    <Cantidad>1.000</Cantidad>
+    <Cantidad>{{ item.quantity }}</Cantidad>
     <UnidadMedida>Sp</UnidadMedida>
     <TipoTransaccion>01</TipoTransaccion>
-    <Detalle>SERVICIOS CONTABLES DEL MES DE OCT 2025</Detalle>
-    <PrecioUnitario>50.00000</PrecioUnitario>
+    <Detalle>{{ item.description }}</Detalle>
+    <PrecioUnitario>{{ item.unit_price }}</PrecioUnitario>
     <MontoTotal>50.00000</MontoTotal>
     <SubTotal>50.00000</SubTotal>
     <BaseImponible>50.00000</BaseImponible>
