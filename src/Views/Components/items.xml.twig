@@ -14,7 +14,7 @@
     </CodigoComercial>
     {% endfor %} {% endif %}
     <Cantidad>{{ item.quantity }}</Cantidad>
-    <UnidadMedida>Sp</UnidadMedida>
+    <UnidadMedida>{{ item.unit_measure.code }}</UnidadMedida>
     <TipoTransaccion>01</TipoTransaccion>
     <Detalle>{{ item.description }}</Detalle>
     <PrecioUnitario>{{ item.unit_price }}</PrecioUnitario>

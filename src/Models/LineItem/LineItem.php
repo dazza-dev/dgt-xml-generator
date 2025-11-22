@@ -227,7 +227,7 @@ class LineItem
         return [
             'customs_tariff_code' => $this->getCustomsTariffCode(),
             'cabys_code' => $this->getCabysCode(),
-            'commercial_codes' => array_map(fn(CommercialCode $c) => $c->toArray(), $this->getCommercialCodes()),
+            'commercial_codes' => array_map(fn (CommercialCode $c) => $c->toArray(), $this->getCommercialCodes()),
             'unit_measure' => $this->getUnitMeasure()?->toArray(),
             'description' => $this->getDescription(),
             'quantity' => $this->getQuantity(),
