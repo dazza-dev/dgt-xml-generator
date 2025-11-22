@@ -81,6 +81,13 @@ class Document
     private Summary $summary;
 
     /**
+     * Additional information
+     *
+     * @var AdditionalInfo[]
+     */
+    private array $additionalInfo = [];
+
+    /**
      * Document constructor
      *
      * @param  array  $data  Document data
@@ -145,6 +152,11 @@ class Document
 
         // Summary
         $this->setSummary($data['summary']);
+
+        // Additional info
+        if (isset($data['additional_info'])) {
+            $this->setAdditionalInfo($data['additional_info']);
+        }
     }
 
     /**
@@ -400,6 +412,35 @@ class Document
     }
 
     /**
+     * Get additional info
+     *
+     * @return AdditionalInfo[]
+     */
+    public function getAdditionalInfo(): array
+    {
+        return $this->additionalInfo;
+    }
+
+    /**
+     * Set additional info
+     */
+    public function setAdditionalInfo(array $additionalInfo): void
+    {
+        $this->additionalInfo = [];
+        foreach ($additionalInfo as $info) {
+            $this->addAdditionalInfo($info);
+        }
+    }
+
+    /**
+     * Add additional info item
+     */
+    public function addAdditionalInfo(array|AdditionalInfo $info): void
+    {
+        $this->additionalInfo[] = $info instanceof AdditionalInfo ? $info : new AdditionalInfo($info);
+    }
+
+    /**
      * Get array representation
      */
     public function toArray(): array
@@ -418,6 +459,7 @@ class Document
             // 'line_items' => array_map(fn (LineItem $lineItem) => $lineItem->toArray(), $this->getLineItems()),
             'payments' => array_map(fn (Payment $payment) => $payment->toArray(), $this->getPayments()),
             'summary' => $this->getSummary()->toArray(),
+            'additional_info' => array_map(fn (AdditionalInfo $info) => $info->toArray(), $this->getAdditionalInfo()),
         ];
     }
 }
