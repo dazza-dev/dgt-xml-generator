@@ -305,7 +305,7 @@ class Document
     public function getDocumentKey(): string
     {
         $sequentialNumber = $this->getSequentialNumber();
-        $identificationNumber = $this->getIssuer()->getIdentificationNumber();
+        $identificationNumber = str_pad((string) $this->getIssuer()->getIdentificationNumber(), 12, '0', STR_PAD_LEFT);
         $dateParts = $this->getTwoDigitDateParts();
         $situation = $this->getSituation()->getCode();
         $securityKey = $this->getSecurityKey();
