@@ -47,6 +47,11 @@ class LineItem
     protected ?string $commercialUnitMeasure = null;
 
     /**
+     * Transaction Type
+     */
+    protected ?TransactionType $transactionType = null;
+
+    /**
      * LineItem constructor
      *
      * @param  array  $data  LineItem data
@@ -95,6 +100,10 @@ class LineItem
 
         if (isset($data['unit_price'])) {
             $this->setUnitPrice($data['unit_price']);
+        }
+
+        if (isset($data['transaction_type'])) {
+            $this->setTransactionType($data['transaction_type']);
         }
     }
 
@@ -245,6 +254,29 @@ class LineItem
     }
 
     /**
+     * Get Transaction Type
+     */
+    public function getTransactionType(): ?TransactionType
+    {
+        return $this->transactionType;
+    }
+
+    /**
+     * Set Transaction Type
+     */
+    public function setTransactionType(TransactionType|array|string $transactionType): void
+    {
+        if (is_array($transactionType)) {
+            $this->transactionType = new TransactionType($transactionType);
+        } elseif (is_string($transactionType)) {
+            $data = (new DataLoader('tipos-transaccion'))->getByCode($transactionType);
+            $this->transactionType = new TransactionType($data);
+        } else {
+            $this->transactionType = $transactionType;
+        }
+    }
+
+    /**
      * Convert to array for XML generation
      */
     public function toArray(): array
@@ -255,6 +287,7 @@ class LineItem
             'commercial_codes' => array_map(fn (CommercialCode $c) => $c->toArray(), $this->getCommercialCodes()),
             'unit_measure' => $this->getUnitMeasure()?->toArray(),
             'commercial_unit_measure' => $this->getCommercialUnitMeasure(),
+            'transaction_type' => $this->getTransactionType()?->toArray(),
             'description' => $this->getDescription(),
             'quantity' => $this->getQuantity(),
             'unit_price' => $this->getUnitPrice(),
