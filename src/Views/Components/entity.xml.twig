@@ -24,5 +24,7 @@
     <CodigoPais>{{ entity.phone.country_code }}</CodigoPais>
     <NumTelefono>{{ entity.phone.number }}</NumTelefono>
   </Telefono>
-  <CorreoElectronico>{{ entity.email }}</CorreoElectronico>
+  {% for email in entity.email %}
+  <CorreoElectronico>{{ email }}</CorreoElectronico>
+  {% endfor %}
 </{{ node }}>

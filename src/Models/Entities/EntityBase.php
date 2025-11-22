@@ -43,9 +43,9 @@ abstract class EntityBase
     public ?Phone $phone = null;
 
     /**
-     * Email
+     * Email addresses
      */
-    public ?string $email = null;
+    public array $email = [];
 
     /**
      * Alcoholic beverages fiscal registry (Law 8707)
@@ -233,17 +233,25 @@ abstract class EntityBase
     /**
      * Get email
      */
-    public function getEmail(): ?string
+    public function getEmail(): array
     {
         return $this->email;
     }
 
     /**
-     * Set email
+     * Set email addresses (array or comma-separated string)
      */
-    public function setEmail(string $email): void
+    public function setEmail(string|array $email): void
     {
-        $this->email = $email;
+        if (is_string($email)) {
+            $parts = array_map(static fn($e) => trim((string) $e), explode(',', $email));
+        } else {
+            $parts = array_map(static fn($e) => trim((string) $e), $email);
+        }
+
+        $parts = array_values(array_filter($parts, static fn($e) => $e !== ''));
+
+        $this->email = $parts;
     }
 
     /**
