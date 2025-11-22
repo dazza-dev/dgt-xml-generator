@@ -52,6 +52,16 @@ class LineItem
     protected ?TransactionType $transactionType = null;
 
     /**
+     * VIN or Serial Numbers
+     */
+    protected array $vinOrSerialNumbers = [];
+
+    /**
+     * Medication Registration
+     */
+    protected ?string $medicationRegistration = null;
+
+    /**
      * LineItem constructor
      *
      * @param  array  $data  LineItem data
@@ -104,6 +114,14 @@ class LineItem
 
         if (isset($data['transaction_type'])) {
             $this->setTransactionType($data['transaction_type']);
+        }
+
+        if (isset($data['vin_or_serial_numbers'])) {
+            $this->setVinOrSerialNumbers($data['vin_or_serial_numbers']);
+        }
+
+        if (isset($data['medication_registration'])) {
+            $this->setMedicationRegistration($data['medication_registration']);
         }
     }
 
@@ -277,6 +295,53 @@ class LineItem
     }
 
     /**
+     * Get VIN or Serial Numbers
+     */
+    public function getVinOrSerialNumbers(): array
+    {
+        return $this->vinOrSerialNumbers;
+    }
+
+    /**
+     * Set VIN or Serial Numbers
+     */
+    public function setVinOrSerialNumbers(array|string $values): void
+    {
+        $this->vinOrSerialNumbers = [];
+        if (is_array($values)) {
+            foreach ($values as $value) {
+                $this->addVinOrSerialNumber($value);
+            }
+        } else {
+            $this->addVinOrSerialNumber($values);
+        }
+    }
+
+    /**
+     * Add VIN or Serial Number
+     */
+    public function addVinOrSerialNumber(string $value): void
+    {
+        $this->vinOrSerialNumbers[] = $value;
+    }
+
+    /**
+     * Get Medication Registration
+     */
+    public function getMedicationRegistration(): ?string
+    {
+        return $this->medicationRegistration;
+    }
+
+    /**
+     * Set Medication Registration
+     */
+    public function setMedicationRegistration(string $registration): void
+    {
+        $this->medicationRegistration = $registration;
+    }
+
+    /**
      * Convert to array for XML generation
      */
     public function toArray(): array
@@ -288,6 +353,8 @@ class LineItem
             'unit_measure' => $this->getUnitMeasure()?->toArray(),
             'commercial_unit_measure' => $this->getCommercialUnitMeasure(),
             'transaction_type' => $this->getTransactionType()?->toArray(),
+            'vin_or_serial_numbers' => $this->getVinOrSerialNumbers(),
+            'medication_registration' => $this->getMedicationRegistration(),
             'description' => $this->getDescription(),
             'quantity' => $this->getQuantity(),
             'unit_price' => $this->getUnitPrice(),

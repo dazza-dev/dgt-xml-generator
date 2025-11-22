@@ -19,6 +19,14 @@
     <UnidadMedidaComercial>{{
       item.commercial_unit_measure
     }}</UnidadMedidaComercial>
+    {% endif %} {% if item.vin_or_serial_numbers and
+    item.vin_or_serial_numbers|length > 0 %} {% for vin in
+    item.vin_or_serial_numbers %}
+    <NumeroVINoSerie>{{ vin }}</NumeroVINoSerie>
+    {% endfor %} {% endif %} {% if item.medication_registration %}
+    <RegistroMedicamento>{{
+      item.medication_registration
+    }}</RegistroMedicamento>
     {% endif %}
     <TipoTransaccion>{{ item.transaction_type.code }}</TipoTransaccion>
     <Detalle>{{ item.description }}</Detalle>
