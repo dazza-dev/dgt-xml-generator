@@ -80,6 +80,11 @@ class Summary
     private ?float $totalNetSale = null;
 
     /**
+     * Total impuesto
+     */
+    private ?float $totalTax = null;
+
+    /**
      * Summary constructor
      *
      * @param  array  $data  Summary data
@@ -156,6 +161,10 @@ class Summary
 
         if (isset($data['total_net_sale'])) {
             $this->setTotalNetSale($data['total_net_sale']);
+        }
+
+        if (isset($data['total_tax'])) {
+            $this->setTotalTax($data['total_tax']);
         }
     }
 
@@ -400,6 +409,22 @@ class Summary
     }
 
     /**
+     * Get total tax amount
+     */
+    public function getTotalTax(): ?float
+    {
+        return $this->totalTax;
+    }
+
+    /**
+     * Set total tax amount
+     */
+    public function setTotalTax(float $totalTax): void
+    {
+        $this->totalTax = $totalTax;
+    }
+
+    /**
      * Convert model to array
      */
     public function toArray(): array
@@ -420,6 +445,7 @@ class Summary
             'total_sale' => $this->getTotalSale(),
             'total_discounts' => $this->getTotalDiscounts(),
             'total_net_sale' => $this->getTotalNetSale(),
+            'total_tax' => $this->getTotalTax(),
         ];
     }
 }
