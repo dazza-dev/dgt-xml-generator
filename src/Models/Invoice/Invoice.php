@@ -11,6 +11,9 @@ class Invoice extends Document
      */
     public function __construct(array $data = [])
     {
+        // Set document type
+        $this->setDocumentType('01');
+
         // Initialize invoice data
         if (empty($data)) {
             parent::__construct($data);

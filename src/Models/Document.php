@@ -12,6 +12,11 @@ use DazzaDev\DgtXmlGenerator\Models\Payment\Payment;
 class Document
 {
     /**
+     * Document type
+     */
+    private DocumentType $documentType;
+
+    /**
      * Sequential number
      */
     private string $sequential;
@@ -157,6 +162,24 @@ class Document
         if (isset($data['additional_info'])) {
             $this->setAdditionalInfo($data['additional_info']);
         }
+    }
+
+    /**
+     * Get document type
+     */
+    public function getDocumentType(): DocumentType
+    {
+        return $this->documentType;
+    }
+
+    /**
+     * Set document type
+     */
+    public function setDocumentType(string $documentTypeCode): void
+    {
+        $documentType = (new DataLoader('tipos-comprobante'))->getByCode($documentTypeCode);
+
+        $this->documentType = new DocumentType($documentType);
     }
 
     /**
@@ -446,6 +469,7 @@ class Document
     public function toArray(): array
     {
         return [
+            'document_type' => $this->getDocumentType()->toArray(),
             'sequential' => $this->getSequential(),
             'date' => $this->getDate(),
             'situation' => $this->getSituation()?->toArray(),
