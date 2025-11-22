@@ -2,6 +2,8 @@
 
 namespace DazzaDev\DgtXmlGenerator\Models\LineItem;
 
+use DazzaDev\DgtXmlGenerator\DataLoader;
+
 class LineItem
 {
     /**
@@ -35,6 +37,11 @@ class LineItem
     protected ?string $customsTariffCode = null;
 
     /**
+     * Unit of Measure
+     */
+    protected ?UnitMeasure $unitMeasure = null;
+
+    /**
      * LineItem constructor
      *
      * @param  array  $data  LineItem data
@@ -63,6 +70,10 @@ class LineItem
 
         if (isset($data['commercial_codes'])) {
             $this->setCommercialCodes($data['commercial_codes']);
+        }
+
+        if (isset($data['unit_measure'])) {
+            $this->setUnitMeasure($data['unit_measure']);
         }
 
         if (isset($data['description'])) {
@@ -186,6 +197,29 @@ class LineItem
     }
 
     /**
+     * Get Unit of Measure
+     */
+    public function getUnitMeasure(): ?UnitMeasure
+    {
+        return $this->unitMeasure;
+    }
+
+    /**
+     * Set Unit of Measure
+     */
+    public function setUnitMeasure(UnitMeasure|array|string $unitMeasure): void
+    {
+        if (is_array($unitMeasure)) {
+            $this->unitMeasure = new UnitMeasure($unitMeasure);
+        } elseif (is_string($unitMeasure)) {
+            $data = (new DataLoader('unidades-medida'))->getByCode($unitMeasure);
+            $this->unitMeasure = new UnitMeasure($data);
+        } else {
+            $this->unitMeasure = $unitMeasure;
+        }
+    }
+
+    /**
      * Convert to array for XML generation
      */
     public function toArray(): array
@@ -193,7 +227,8 @@ class LineItem
         return [
             'customs_tariff_code' => $this->getCustomsTariffCode(),
             'cabys_code' => $this->getCabysCode(),
-            'commercial_codes' => array_map(fn (CommercialCode $c) => $c->toArray(), $this->getCommercialCodes()),
+            'commercial_codes' => array_map(fn(CommercialCode $c) => $c->toArray(), $this->getCommercialCodes()),
+            'unit_measure' => $this->getUnitMeasure()?->toArray(),
             'description' => $this->getDescription(),
             'quantity' => $this->getQuantity(),
             'unit_price' => $this->getUnitPrice(),
