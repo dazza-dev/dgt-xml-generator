@@ -244,12 +244,12 @@ abstract class EntityBase
     public function setEmail(string|array $email): void
     {
         if (is_string($email)) {
-            $parts = array_map(static fn($e) => trim((string) $e), explode(',', $email));
+            $parts = array_map(static fn ($e) => trim((string) $e), explode(',', $email));
         } else {
-            $parts = array_map(static fn($e) => trim((string) $e), $email);
+            $parts = array_map(static fn ($e) => trim((string) $e), $email);
         }
 
-        $parts = array_values(array_filter($parts, static fn($e) => $e !== ''));
+        $parts = array_values(array_filter($parts, static fn ($e) => $e !== ''));
 
         $this->email = $parts;
     }
