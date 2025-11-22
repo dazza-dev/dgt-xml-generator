@@ -4,9 +4,9 @@ namespace DazzaDev\DgtXmlGenerator\Models;
 
 use DazzaDev\DgtXmlGenerator\DataLoader;
 use DazzaDev\DgtXmlGenerator\DateValidator;
-use DazzaDev\DgtXmlGenerator\Models\Document\LineItem;
 use DazzaDev\DgtXmlGenerator\Models\Entities\Issuer;
 use DazzaDev\DgtXmlGenerator\Models\Entities\Receiver;
+use DazzaDev\DgtXmlGenerator\Models\LineItem\LineItem;
 use DazzaDev\DgtXmlGenerator\Models\Payment\Payment;
 
 class Document
@@ -494,7 +494,7 @@ class Document
             'currency' => $this->getCurrency()?->toArray(),
             'issuer' => $this->getIssuer()->toArray(),
             'receiver' => $this->getReceiver()->toArray(),
-            // 'line_items' => array_map(fn (LineItem $lineItem) => $lineItem->toArray(), $this->getLineItems()),
+            'line_items' => array_map(fn (LineItem $lineItem) => $lineItem->toArray(), $this->getLineItems()),
             'payments' => array_map(fn (Payment $payment) => $payment->toArray(), $this->getPayments()),
             'summary' => $this->getSummary()->toArray(),
             'additional_info' => array_map(fn (AdditionalInfo $info) => $info->toArray(), $this->getAdditionalInfo()),
