@@ -20,7 +20,7 @@
       item.commercial_unit_measure
     }}</UnidadMedidaComercial>
     {% endif %}
-    <TipoTransaccion>01</TipoTransaccion>
+    <TipoTransaccion>{{ item.transaction_type.code }}</TipoTransaccion>
     <Detalle>{{ item.description }}</Detalle>
     <PrecioUnitario>{{ item.unit_price }}</PrecioUnitario>
     <MontoTotal>50.00000</MontoTotal>
