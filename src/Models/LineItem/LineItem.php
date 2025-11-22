@@ -10,6 +10,11 @@ class LineItem
     protected string $cabysCode;
 
     /**
+     * Commercial Codes
+     */
+    protected array $commercialCodes = [];
+
+    /**
      * Description
      */
     protected string $description;
@@ -54,6 +59,10 @@ class LineItem
 
         if (isset($data['cabys_code'])) {
             $this->setCabysCode($data['cabys_code']);
+        }
+
+        if (isset($data['commercial_codes'])) {
+            $this->setCommercialCodes($data['commercial_codes']);
         }
 
         if (isset($data['description'])) {
@@ -150,13 +159,41 @@ class LineItem
     }
 
     /**
+     * Get Commercial Codes
+     */
+    public function getCommercialCodes(): array
+    {
+        return $this->commercialCodes;
+    }
+
+    /**
+     * Set Commercial Codes
+     */
+    public function setCommercialCodes(array $commercialCodes): void
+    {
+        $this->commercialCodes = [];
+        foreach ($commercialCodes as $commercialCode) {
+            $this->addCommercialCode($commercialCode);
+        }
+    }
+
+    /**
+     * Add Commercial Code
+     */
+    public function addCommercialCode(array|CommercialCode $commercialCode): void
+    {
+        $this->commercialCodes[] = $commercialCode instanceof CommercialCode ? $commercialCode : new CommercialCode($commercialCode);
+    }
+
+    /**
      * Convert to array for XML generation
      */
     public function toArray(): array
     {
         return [
-            'cabys_code' => $this->getCabysCode(),
             'customs_tariff_code' => $this->getCustomsTariffCode(),
+            'cabys_code' => $this->getCabysCode(),
+            'commercial_codes' => array_map(fn (CommercialCode $c) => $c->toArray(), $this->getCommercialCodes()),
             'description' => $this->getDescription(),
             'quantity' => $this->getQuantity(),
             'unit_price' => $this->getUnitPrice(),
