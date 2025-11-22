@@ -37,6 +37,11 @@ class Document
     private string $sequential;
 
     /**
+     * Security key
+     */
+    private string $securityKey;
+
+    /**
      * Situation
      */
     private ?Situation $situation = null;
@@ -125,6 +130,9 @@ class Document
         // Sequential
         $this->setSequential($data['sequential']);
 
+        // Security Key
+        $this->setSecurityKey($data['security_key']);
+
         // Situation
         $this->setSituation($data['situation']);
 
@@ -152,9 +160,9 @@ class Document
         $this->setReceiver($data['receiver']);
 
         // Line items
-        /*if (isset($data['line_items'])) {
+        if (isset($data['line_items'])) {
             $this->setLineItems($data['line_items']);
-        }*/
+        }
 
         // Payments
         if (isset($data['payments'])) {
@@ -255,6 +263,22 @@ class Document
     }
 
     /**
+     * Get security key
+     */
+    public function getSecurityKey(): string
+    {
+        return $this->securityKey;
+    }
+
+    /**
+     * Set security key
+     */
+    public function setSecurityKey(string $securityKey): void
+    {
+        $this->securityKey = $securityKey;
+    }
+
+    /**
      * Get document number
      */
     public function getSequentialNumber(): string
@@ -272,7 +296,11 @@ class Document
      */
     public function getDocumentKey(): string
     {
-        return 'DocumentKey';
+        $sequentialNumber = $this->getSequentialNumber();
+        $situation = $this->getSituation()->getCode();
+        $securityKey = $this->getSecurityKey();
+
+        return 506 .$sequentialNumber.$situation.$securityKey;
     }
 
     /**
