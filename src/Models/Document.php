@@ -24,12 +24,12 @@ class Document
     /**
      * Establishment information
      */
-    public int $establishment;
+    public string $establishment;
 
     /**
      * Emission point information
      */
-    public int $emissionPoint;
+    public string $emissionPoint;
 
     /**
      * Sequential number
@@ -225,7 +225,7 @@ class Document
     /**
      * Get establishment
      */
-    public function getEstablishment(): int
+    public function getEstablishment(): string
     {
         return $this->establishment;
     }
@@ -233,15 +233,15 @@ class Document
     /**
      * Set establishment
      */
-    public function setEstablishment(int|string $establishment): void
+    public function setEstablishment(string $establishment): void
     {
-        $this->establishment = (int) $establishment;
+        $this->establishment = $establishment;
     }
 
     /**
      * Get emission point
      */
-    public function getEmissionPoint(): int
+    public function getEmissionPoint(): string
     {
         return $this->emissionPoint;
     }
@@ -249,9 +249,9 @@ class Document
     /**
      * Set emission point
      */
-    public function setEmissionPoint(int|string $emissionPoint): void
+    public function setEmissionPoint(string $emissionPoint): void
     {
-        $this->emissionPoint = (int) $emissionPoint;
+        $this->emissionPoint = $emissionPoint;
     }
 
     /**
