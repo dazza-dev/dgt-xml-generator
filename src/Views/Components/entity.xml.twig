@@ -12,8 +12,8 @@
   {% endif %} 
   <Ubicacion>
     <Provincia>{{ entity.location.province.code }}</Provincia>
-    <Canton>{{ entity.location.canton.code }}</Canton>
-    <Distrito>{{ entity.location.district.code }}</Distrito>
+    <Canton>{{ entity.location.canton.code|slice(-2) }}</Canton>
+    <Distrito>{{ entity.location.district.code|slice(-2) }}</Distrito>
     <Barrio>{{ entity.location.neighborhood }}</Barrio>
     <OtrasSenas>{{ entity.location.address_details }}</OtrasSenas>
     {% if entity.location.foreign_address_details %}
