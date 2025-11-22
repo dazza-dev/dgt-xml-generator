@@ -83,4 +83,18 @@ class DateValidator
     {
         return $this->validate($date)->format('Y-m-d H:i:sP');
     }
+
+    /**
+     * Get date parts in two digits
+     */
+    public function getTwoDigitDateParts(string|DateTime $date): array
+    {
+        $dateObject = $this->validate($date);
+
+        return [
+            'day' => $dateObject->format('d'),
+            'month' => $dateObject->format('m'),
+            'year' => $dateObject->format('y'),
+        ];
+    }
 }

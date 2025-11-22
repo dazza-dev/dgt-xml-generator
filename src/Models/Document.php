@@ -217,7 +217,7 @@ class Document
     /**
      * Get date parts in two digits
      */
-    public function getTwoDigitDateParts(): string
+    public function getTwoDigitDateParts(): array
     {
         return (new DateValidator)->getTwoDigitDateParts($this->date);
     }
