@@ -452,8 +452,6 @@ class Document
             'sale_condition' => $this->getSaleCondition()?->toArray(),
             'sale_condition_details' => $this->getSaleConditionDetails(),
             'currency' => $this->getCurrency()?->toArray(),
-            'establishment' => $this->getEstablishment(),
-            'emission_point' => $this->getEmissionPoint(),
             'issuer' => $this->getIssuer()->toArray(),
             'receiver' => $this->getReceiver()->toArray(),
             // 'line_items' => array_map(fn (LineItem $lineItem) => $lineItem->toArray(), $this->getLineItems()),
