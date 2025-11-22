@@ -17,14 +17,24 @@ class Document
     private DocumentType $documentType;
 
     /**
-     * Sequential number
-     */
-    private string $sequential;
-
-    /**
      * Date of the document
      */
     private string $date;
+
+    /**
+     * Establishment information
+     */
+    public int $establishment;
+
+    /**
+     * Emission point information
+     */
+    public int $emissionPoint;
+
+    /**
+     * Sequential number
+     */
+    private string $sequential;
 
     /**
      * Situation
@@ -45,16 +55,6 @@ class Document
      * Currency
      */
     private ?Currency $currency = null;
-
-    /**
-     * Establishment information
-     */
-    public string $establishment = '';
-
-    /**
-     * Emission point information
-     */
-    public string $emissionPoint = '';
 
     /**
      * Issuer information
@@ -113,11 +113,17 @@ class Document
             return;
         }
 
-        // Sequential
-        $this->setSequential($data['sequential']);
-
         // Date
         $this->setDate($data['date']);
+
+        // Establishment
+        $this->setEstablishment($data['establishment']);
+
+        // Emission Point
+        $this->setEmissionPoint($data['emission_point']);
+
+        // Sequential
+        $this->setSequential($data['sequential']);
 
         // Situation
         $this->setSituation($data['situation']);
@@ -198,6 +204,38 @@ class Document
     public function getDate(): string
     {
         return $this->date;
+    }
+
+    /**
+     * Get establishment
+     */
+    public function getEstablishment(): int
+    {
+        return $this->establishment;
+    }
+
+    /**
+     * Set establishment
+     */
+    public function setEstablishment(int|string $establishment): void
+    {
+        $this->establishment = (int) $establishment;
+    }
+
+    /**
+     * Get emission point
+     */
+    public function getEmissionPoint(): int
+    {
+        return $this->emissionPoint;
+    }
+
+    /**
+     * Set emission point
+     */
+    public function setEmissionPoint(int|string $emissionPoint): void
+    {
+        $this->emissionPoint = (int) $emissionPoint;
     }
 
     /**
@@ -282,38 +320,6 @@ class Document
     public function setCurrency(array|Currency $currency): void
     {
         $this->currency = $currency instanceof Currency ? $currency : new Currency($currency);
-    }
-
-    /**
-     * Get establishment
-     */
-    public function getEstablishment(): string
-    {
-        return $this->establishment;
-    }
-
-    /**
-     * Set establishment
-     */
-    public function setEstablishment(string $establishment): void
-    {
-        $this->establishment = $establishment;
-    }
-
-    /**
-     * Get emission point
-     */
-    public function getEmissionPoint(): string
-    {
-        return $this->emissionPoint;
-    }
-
-    /**
-     * Set emission point
-     */
-    public function setEmissionPoint(string $emissionPoint): void
-    {
-        $this->emissionPoint = $emissionPoint;
     }
 
     /**
