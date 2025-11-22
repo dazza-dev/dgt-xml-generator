@@ -19,9 +19,9 @@
   }}</TotalMercanciasExentas>
   <TotalMercExonerada>{{ summary.total_exonerated_goods }}</TotalMercExonerada>
   <TotalMercNoSujeta>{{ summary.total_non_taxable_goods }}</TotalMercNoSujeta>
-  <TotalGravado>50.00000</TotalGravado>
-  <TotalExento>0</TotalExento>
-  <TotalExonerado>0</TotalExonerado>
+  <TotalGravado>{{ summary.total_taxed }}</TotalGravado>
+  <TotalExento>{{ summary.total_exempt }}</TotalExento>
+  <TotalExonerado>{{ summary.total_exonerated }}</TotalExonerado>
   <TotalNoSujeto>0</TotalNoSujeto>
   <TotalVenta>50.00000</TotalVenta>
   <TotalVentaNeta>50.00000</TotalVentaNeta>

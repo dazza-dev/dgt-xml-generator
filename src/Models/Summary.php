@@ -45,6 +45,21 @@ class Summary
     private ?float $totalNonTaxableGoods = null;
 
     /**
+     * Total gravado
+     */
+    private ?float $totalTaxed = null;
+
+    /**
+     * Total exento
+     */
+    private ?float $totalExempt = null;
+
+    /**
+     * Total exonerado
+     */
+    private ?float $totalExonerated = null;
+
+    /**
      * Summary constructor
      *
      * @param  array  $data  Summary data
@@ -93,6 +108,18 @@ class Summary
 
         if (isset($data['total_non_taxable_goods'])) {
             $this->setTotalNonTaxableGoods($data['total_non_taxable_goods']);
+        }
+
+        if (isset($data['total_taxed'])) {
+            $this->setTotalTaxed($data['total_taxed']);
+        }
+
+        if (isset($data['total_exempt'])) {
+            $this->setTotalExempt($data['total_exempt']);
+        }
+
+        if (isset($data['total_exonerated'])) {
+            $this->setTotalExonerated($data['total_exonerated']);
         }
     }
 
@@ -225,6 +252,54 @@ class Summary
     }
 
     /**
+     * Get total taxed
+     */
+    public function getTotalTaxed(): ?float
+    {
+        return $this->totalTaxed;
+    }
+
+    /**
+     * Set total taxed
+     */
+    public function setTotalTaxed(float $totalTaxed): void
+    {
+        $this->totalTaxed = $totalTaxed;
+    }
+
+    /**
+     * Get total exempt
+     */
+    public function getTotalExempt(): ?float
+    {
+        return $this->totalExempt;
+    }
+
+    /**
+     * Set total exempt
+     */
+    public function setTotalExempt(float $totalExempt): void
+    {
+        $this->totalExempt = $totalExempt;
+    }
+
+    /**
+     * Get total exonerated
+     */
+    public function getTotalExonerated(): ?float
+    {
+        return $this->totalExonerated;
+    }
+
+    /**
+     * Set total exonerated
+     */
+    public function setTotalExonerated(float $totalExonerated): void
+    {
+        $this->totalExonerated = $totalExonerated;
+    }
+
+    /**
      * Convert model to array
      */
     public function toArray(): array
@@ -238,6 +313,9 @@ class Summary
             'total_exempt_goods' => $this->getTotalExemptGoods(),
             'total_exonerated_goods' => $this->getTotalExoneratedGoods(),
             'total_non_taxable_goods' => $this->getTotalNonTaxableGoods(),
+            'total_taxed' => $this->getTotalTaxed(),
+            'total_exempt' => $this->getTotalExempt(),
+            'total_exonerated' => $this->getTotalExonerated(),
         ];
     }
 }
