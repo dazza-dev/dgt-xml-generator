@@ -15,8 +15,8 @@
     <MontoTotal>50.00000</MontoTotal>
     <SubTotal>50.00000</SubTotal>
     <BaseImponible>50.00000</BaseImponible>
-    {% include 'Components/invoice/tax.xml.twig' with { 'node':
-    'Impuesto','tax': item.tax} %}
+    {% include 'Components/taxes.xml.twig' with { 'node': 'Impuesto','tax':
+    item.tax} %}
     <ImpuestoAsumidoEmisorFabrica>0</ImpuestoAsumidoEmisorFabrica>
     <ImpuestoNeto>6.50000</ImpuestoNeto>
     <MontoTotalLinea>56.50000</MontoTotalLinea>
