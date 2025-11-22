@@ -37,6 +37,11 @@ class Document
     private ?string $saleConditionDetails = null;
 
     /**
+     * Currency
+     */
+    private ?Currency $currency = null;
+
+    /**
      * Establishment information
      */
     public string $establishment = '';
@@ -107,6 +112,14 @@ class Document
 
         // SaleCondition
         $this->setSaleCondition($data['sale_condition']);
+
+        // Sale condition details
+        if (isset($data['sale_condition_details'])) {
+            $this->setSaleConditionDetails($data['sale_condition_details']);
+        }
+
+        // Currency
+        $this->setCurrency($data['currency']);
 
         // Establishment
         $this->setEstablishment($data['establishment']);
@@ -230,6 +243,22 @@ class Document
     public function setSaleConditionDetails(string $saleConditionDetails): void
     {
         $this->saleConditionDetails = $saleConditionDetails;
+    }
+
+    /**
+     * Get currency
+     */
+    public function getCurrency(): ?Currency
+    {
+        return $this->currency;
+    }
+
+    /**
+     * Set currency
+     */
+    public function setCurrency(array|Currency $currency): void
+    {
+        $this->currency = $currency instanceof Currency ? $currency : new Currency($currency);
     }
 
     /**
@@ -381,6 +410,7 @@ class Document
             'situation' => $this->getSituation()?->toArray(),
             'sale_condition' => $this->getSaleCondition()?->toArray(),
             'sale_condition_details' => $this->getSaleConditionDetails(),
+            'currency' => $this->getCurrency()?->toArray(),
             'establishment' => $this->getEstablishment(),
             'emission_point' => $this->getEmissionPoint(),
             'issuer' => $this->getIssuer()->toArray(),

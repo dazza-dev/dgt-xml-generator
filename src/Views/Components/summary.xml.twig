@@ -1,7 +1,7 @@
 <ResumenFactura>
   <CodigoTipoMoneda>
-    <CodigoMoneda>USD</CodigoMoneda>
-    <TipoCambio>504.73</TipoCambio>
+    <CodigoMoneda>{{ currency.code }}</CodigoMoneda>
+    <TipoCambio>{{ currency.exchange_rate }}</TipoCambio>
   </CodigoTipoMoneda>
   <TotalServGravados>{{ summary.total_taxed_services }}</TotalServGravados>
   <TotalServExentos>{{ summary.total_exempt_services }}</TotalServExentos>
