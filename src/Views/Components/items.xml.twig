@@ -6,10 +6,13 @@
     <PartidaArancelaria>{{ item.customs_tariff_code }}</PartidaArancelaria>
     {% endif %}
     <CodigoCABYS>{{ item.cabys_code }}</CodigoCABYS>
+    {% if item.commercial_codes and item.commercial_codes|length > 0 %} {% for
+    commercial_code in item.commercial_codes|slice(0,5) %}
     <CodigoComercial>
-      <Tipo>04</Tipo>
-      <Codigo>1</Codigo>
+      <Tipo>{{ commercial_code.type.code }}</Tipo>
+      <Codigo>{{ commercial_code.code }}</Codigo>
     </CodigoComercial>
+    {% endfor %} {% endif %}
     <Cantidad>{{ item.quantity }}</Cantidad>
     <UnidadMedida>Sp</UnidadMedida>
     <TipoTransaccion>01</TipoTransaccion>
