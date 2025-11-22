@@ -60,6 +60,26 @@ class Summary
     private ?float $totalExonerated = null;
 
     /**
+     * Total No Sujeto
+     */
+    private ?float $totalNonTaxable = null;
+
+    /**
+     * Total venta
+     */
+    private ?float $totalSale = null;
+
+    /**
+     * Total descuentos
+     */
+    private ?float $totalDiscounts = null;
+
+    /**
+     * Total venta neta
+     */
+    private ?float $totalNetSale = null;
+
+    /**
      * Summary constructor
      *
      * @param  array  $data  Summary data
@@ -120,6 +140,22 @@ class Summary
 
         if (isset($data['total_exonerated'])) {
             $this->setTotalExonerated($data['total_exonerated']);
+        }
+
+        if (isset($data['total_non_taxable'])) {
+            $this->setTotalNonTaxable($data['total_non_taxable']);
+        }
+
+        if (isset($data['total_sale'])) {
+            $this->setTotalSale($data['total_sale']);
+        }
+
+        if (isset($data['total_discounts'])) {
+            $this->setTotalDiscounts($data['total_discounts']);
+        }
+
+        if (isset($data['total_net_sale'])) {
+            $this->setTotalNetSale($data['total_net_sale']);
         }
     }
 
@@ -300,6 +336,70 @@ class Summary
     }
 
     /**
+     * Get total non taxable
+     */
+    public function getTotalNonTaxable(): ?float
+    {
+        return $this->totalNonTaxable;
+    }
+
+    /**
+     * Set total non taxable
+     */
+    public function setTotalNonTaxable(float $totalNonTaxable): void
+    {
+        $this->totalNonTaxable = $totalNonTaxable;
+    }
+
+    /**
+     * Get total sale
+     */
+    public function getTotalSale(): ?float
+    {
+        return $this->totalSale;
+    }
+
+    /**
+     * Set total sale
+     */
+    public function setTotalSale(float $totalSale): void
+    {
+        $this->totalSale = $totalSale;
+    }
+
+    /**
+     * Get total discounts
+     */
+    public function getTotalDiscounts(): ?float
+    {
+        return $this->totalDiscounts;
+    }
+
+    /**
+     * Set total discounts
+     */
+    public function setTotalDiscounts(float $totalDiscounts): void
+    {
+        $this->totalDiscounts = $totalDiscounts;
+    }
+
+    /**
+     * Get total net sale
+     */
+    public function getTotalNetSale(): ?float
+    {
+        return $this->totalNetSale;
+    }
+
+    /**
+     * Set total net sale
+     */
+    public function setTotalNetSale(float $totalNetSale): void
+    {
+        $this->totalNetSale = $totalNetSale;
+    }
+
+    /**
      * Convert model to array
      */
     public function toArray(): array
@@ -316,6 +416,10 @@ class Summary
             'total_taxed' => $this->getTotalTaxed(),
             'total_exempt' => $this->getTotalExempt(),
             'total_exonerated' => $this->getTotalExonerated(),
+            'total_non_taxable' => $this->getTotalNonTaxable(),
+            'total_sale' => $this->getTotalSale(),
+            'total_discounts' => $this->getTotalDiscounts(),
+            'total_net_sale' => $this->getTotalNetSale(),
         ];
     }
 }

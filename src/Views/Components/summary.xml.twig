@@ -22,9 +22,10 @@
   <TotalGravado>{{ summary.total_taxed }}</TotalGravado>
   <TotalExento>{{ summary.total_exempt }}</TotalExento>
   <TotalExonerado>{{ summary.total_exonerated }}</TotalExonerado>
-  <TotalNoSujeto>0</TotalNoSujeto>
-  <TotalVenta>50.00000</TotalVenta>
-  <TotalVentaNeta>50.00000</TotalVentaNeta>
+  <TotalNoSujeto>{{ summary.total_non_taxable }}</TotalNoSujeto>
+  <TotalVenta>{{ summary.total_sale }}</TotalVenta>
+  <TotalDescuentos>{{ summary.total_discounts }}</TotalDescuentos>
+  <TotalVentaNeta>{{ summary.total_net_sale }}</TotalVentaNeta>
   <TotalDesgloseImpuesto>
     <Codigo>01</Codigo>
     <CodigoTarifaIVA>08</CodigoTarifaIVA>
