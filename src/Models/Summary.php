@@ -30,6 +30,21 @@ class Summary
     private ?float $totalTaxedGoods = null;
 
     /**
+     * Total mercancías exentas de IVA
+     */
+    private ?float $totalExemptGoods = null;
+
+    /**
+     * Total mercancías exoneradas del IVA
+     */
+    private ?float $totalExoneratedGoods = null;
+
+    /**
+     * Total mercancías No Sujetas de IVA
+     */
+    private ?float $totalNonTaxableGoods = null;
+
+    /**
      * Summary constructor
      *
      * @param  array  $data  Summary data
@@ -66,6 +81,18 @@ class Summary
 
         if (isset($data['total_taxed_goods'])) {
             $this->setTotalTaxedGoods($data['total_taxed_goods']);
+        }
+
+        if (isset($data['total_exempt_goods'])) {
+            $this->setTotalExemptGoods($data['total_exempt_goods']);
+        }
+
+        if (isset($data['total_exonerated_goods'])) {
+            $this->setTotalExoneratedGoods($data['total_exonerated_goods']);
+        }
+
+        if (isset($data['total_non_taxable_goods'])) {
+            $this->setTotalNonTaxableGoods($data['total_non_taxable_goods']);
         }
     }
 
@@ -150,6 +177,54 @@ class Summary
     }
 
     /**
+     * Get total goods exempt from VAT
+     */
+    public function getTotalExemptGoods(): ?float
+    {
+        return $this->totalExemptGoods;
+    }
+
+    /**
+     * Set total goods exempt from VAT
+     */
+    public function setTotalExemptGoods(float $totalExemptGoods): void
+    {
+        $this->totalExemptGoods = $totalExemptGoods;
+    }
+
+    /**
+     * Get total goods exonerated from VAT
+     */
+    public function getTotalExoneratedGoods(): ?float
+    {
+        return $this->totalExoneratedGoods;
+    }
+
+    /**
+     * Set total goods exonerated from VAT
+     */
+    public function setTotalExoneratedGoods(float $totalExoneratedGoods): void
+    {
+        $this->totalExoneratedGoods = $totalExoneratedGoods;
+    }
+
+    /**
+     * Get total goods not subject to VAT
+     */
+    public function getTotalNonTaxableGoods(): ?float
+    {
+        return $this->totalNonTaxableGoods;
+    }
+
+    /**
+     * Set total goods not subject to VAT
+     */
+    public function setTotalNonTaxableGoods(float $totalNonTaxableGoods): void
+    {
+        $this->totalNonTaxableGoods = $totalNonTaxableGoods;
+    }
+
+    /**
      * Convert model to array
      */
     public function toArray(): array
@@ -160,6 +235,9 @@ class Summary
             'total_exonerated_services' => $this->getTotalExoneratedServices(),
             'total_non_taxable_services' => $this->getTotalNonTaxableServices(),
             'total_taxed_goods' => $this->getTotalTaxedGoods(),
+            'total_exempt_goods' => $this->getTotalExemptGoods(),
+            'total_exonerated_goods' => $this->getTotalExoneratedGoods(),
+            'total_non_taxable_goods' => $this->getTotalNonTaxableGoods(),
         ];
     }
 }
