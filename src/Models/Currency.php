@@ -2,17 +2,19 @@
 
 namespace DazzaDev\DgtXmlGenerator\Models;
 
+use DazzaDev\DgtXmlGenerator\DataLoader;
+
 class Currency
 {
     /**
      * Codigo Moneda
      */
-    private string $currency = 'CRC';
+    private array $currency = [];
 
     /**
      * Tipo de cambio
      */
-    private ?float $exchangeRate = 1;
+    private float $exchangeRate = 1;
 
     /**
      * Currency constructor
@@ -45,7 +47,7 @@ class Currency
     /**
      * Get currency
      */
-    public function getCurrency(): string
+    public function getCurrency(): array
     {
         return $this->currency;
     }
@@ -53,9 +55,9 @@ class Currency
     /**
      * Set currency
      */
-    public function setCurrency(string $currency): void
+    public function setCurrency(string $currencyCode = 'CRC'): void
     {
-        $this->currency = $currency;
+        $this->currency = (new DataLoader('tipos-comprobante'))->getByCode($currencyCode);
     }
 
     /**
