@@ -183,34 +183,6 @@ class Document
     }
 
     /**
-     * Get number
-     */
-    public function getSequential(): string
-    {
-        return $this->sequential;
-    }
-
-    /**
-     * Set sequential
-     */
-    public function setSequential(string $sequential): void
-    {
-        $this->sequential = $sequential;
-    }
-
-    /**
-     * Get document number
-     */
-    public function getDocumentNumber(): string
-    {
-        $establishment = $this->getEstablishment()->getCode();
-        $emissionPoint = $this->getEmissionPoint()->getCode();
-        $sequential = $this->getSequential();
-
-        return $establishment.'-'.$emissionPoint.'-'.$sequential;
-    }
-
-    /**
      * Set date
      */
     public function setDate(string $date): void
@@ -226,6 +198,22 @@ class Document
     public function getDate(): string
     {
         return $this->date;
+    }
+
+    /**
+     * Get sequential number
+     */
+    public function getSequential(): string
+    {
+        return $this->sequential;
+    }
+
+    /**
+     * Set sequential number
+     */
+    public function setSequential(string $sequential): void
+    {
+        $this->sequential = $sequential;
     }
 
     /**
