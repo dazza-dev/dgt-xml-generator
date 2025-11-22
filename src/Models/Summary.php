@@ -85,6 +85,11 @@ class Summary
     private ?float $totalTax = null;
 
     /**
+     * Total comprobante
+     */
+    private ?float $totalVoucher = null;
+
+    /**
      * Summary constructor
      *
      * @param  array  $data  Summary data
@@ -165,6 +170,10 @@ class Summary
 
         if (isset($data['total_tax'])) {
             $this->setTotalTax($data['total_tax']);
+        }
+
+        if (isset($data['total_voucher'])) {
+            $this->setTotalVoucher($data['total_voucher']);
         }
     }
 
@@ -425,6 +434,22 @@ class Summary
     }
 
     /**
+     * Get total voucher
+     */
+    public function getTotalVoucher(): ?float
+    {
+        return $this->totalVoucher;
+    }
+
+    /**
+     * Set total voucher
+     */
+    public function setTotalVoucher(float $totalVoucher): void
+    {
+        $this->totalVoucher = $totalVoucher;
+    }
+
+    /**
      * Convert model to array
      */
     public function toArray(): array
@@ -446,6 +471,7 @@ class Summary
             'total_discounts' => $this->getTotalDiscounts(),
             'total_net_sale' => $this->getTotalNetSale(),
             'total_tax' => $this->getTotalTax(),
+            'total_voucher' => $this->getTotalVoucher(),
         ];
     }
 }
