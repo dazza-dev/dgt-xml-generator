@@ -48,6 +48,11 @@ abstract class EntityBase
     public ?string $email = null;
 
     /**
+     * Alcoholic beverages fiscal registry (Law 8707)
+     */
+    private ?string $fiscalRegistry8707 = null;
+
+    /**
      * Constructor to initialize the Company model
      */
     public function __construct(array $data = [])
@@ -94,6 +99,10 @@ abstract class EntityBase
 
         if (isset($data['email'])) {
             $this->setEmail($data['email']);
+        }
+
+        if (isset($data['fiscal_registry_8707'])) {
+            $this->setFiscalRegistry8707($data['fiscal_registry_8707']);
         }
     }
 
@@ -238,6 +247,22 @@ abstract class EntityBase
     }
 
     /**
+     * Get alcoholic beverages fiscal registry (Law 8707)
+     */
+    public function getFiscalRegistry8707(): ?string
+    {
+        return $this->fiscalRegistry8707;
+    }
+
+    /**
+     * Set alcoholic beverages fiscal registry (Law 8707)
+     */
+    public function setFiscalRegistry8707(string $fiscalRegistry8707): void
+    {
+        $this->fiscalRegistry8707 = $fiscalRegistry8707;
+    }
+
+    /**
      * Get base array representation
      */
     protected function getBaseArray(): array
@@ -247,6 +272,7 @@ abstract class EntityBase
             'identification_number' => $this->getIdentificationNumber(),
             'name' => $this->getName(),
             'trade_name' => $this->getTradeName(),
+            'fiscal_registry_8707' => $this->getFiscalRegistry8707(),
             'activity' => $this->getActivity()?->toArray(),
             'location' => $this->getLocation()?->toArray(),
             'phone' => $this->getPhone()?->toArray(),

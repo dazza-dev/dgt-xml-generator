@@ -4,6 +4,9 @@
       <Tipo>{{ entity.identification_type.code }}</Tipo>
       <Numero>{{ entity.identification_number }}</Numero>
   </Identificacion>
+  {% if entity.fiscal_registry_8707 %}
+  <Registrofiscal8707>{{ entity.fiscal_registry_8707 }}</Registrofiscal8707>
+  {% endif %} 
   {% if entity.trade_name %}
   <NombreComercial>{{ entity.trade_name }}</NombreComercial>
   {% endif %} 
@@ -12,7 +15,10 @@
     <Canton>{{ entity.location.canton.code }}</Canton>
     <Distrito>{{ entity.location.district.code }}</Distrito>
     <Barrio>{{ entity.location.neighborhood }}</Barrio>
-    <OtrasSenas>{{ entity.location.address_detail }}</OtrasSenas>
+    <OtrasSenas>{{ entity.location.address_details }}</OtrasSenas>
+    {% if entity.location.foreign_address_details %}
+    <OtrasSenasExtranjero>{{ entity.location.foreign_address_details }}</OtrasSenasExtranjero>
+    {% endif %}
   </Ubicacion>
   <Telefono>
     <CodigoPais>{{ entity.phone.country_code }}</CodigoPais>

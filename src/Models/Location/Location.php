@@ -32,6 +32,11 @@ class Location
     private ?string $addressDetails = null;
 
     /**
+     * Foreign Address Details
+     */
+    private ?string $foreignAddressDetails = null;
+
+    /**
      * Location constructor
      */
     public function __construct(array $data = [])
@@ -66,6 +71,10 @@ class Location
 
         if (isset($data['address_details'])) {
             $this->setAddressDetails($data['address_details']);
+        }
+
+        if (isset($data['foreign_address_details'])) {
+            $this->setForeignAddressDetails($data['foreign_address_details']);
         }
     }
 
@@ -156,6 +165,22 @@ class Location
     }
 
     /**
+     * Get foreign address details
+     */
+    public function getForeignAddressDetails(): ?string
+    {
+        return $this->foreignAddressDetails;
+    }
+
+    /**
+     * Set foreign address details
+     */
+    public function setForeignAddressDetails(string $foreignAddressDetails): void
+    {
+        $this->foreignAddressDetails = $foreignAddressDetails;
+    }
+
+    /**
      * Get array representation
      */
     public function toArray(): array
@@ -166,6 +191,7 @@ class Location
             'district' => $this->getDistrict()?->toArray(),
             'neighborhood' => $this->getNeighborhood(),
             'address_details' => $this->getAddressDetails(),
+            'foreign_address_details' => $this->getForeignAddressDetails(),
         ];
     }
 }
