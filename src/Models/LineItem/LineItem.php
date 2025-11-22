@@ -42,6 +42,11 @@ class LineItem
     protected ?UnitMeasure $unitMeasure = null;
 
     /**
+     * Commercial Unit of Measure
+     */
+    protected ?string $commercialUnitMeasure = null;
+
+    /**
      * LineItem constructor
      *
      * @param  array  $data  LineItem data
@@ -70,6 +75,10 @@ class LineItem
 
         if (isset($data['commercial_codes'])) {
             $this->setCommercialCodes($data['commercial_codes']);
+        }
+
+        if (isset($data['commercial_unit_measure'])) {
+            $this->setCommercialUnitMeasure($data['commercial_unit_measure']);
         }
 
         if (isset($data['unit_measure'])) {
@@ -220,6 +229,22 @@ class LineItem
     }
 
     /**
+     * Get Commercial Unit of Measure
+     */
+    public function getCommercialUnitMeasure(): ?string
+    {
+        return $this->commercialUnitMeasure;
+    }
+
+    /**
+     * Set Commercial Unit of Measure
+     */
+    public function setCommercialUnitMeasure(string $commercialUnitMeasure): void
+    {
+        $this->commercialUnitMeasure = $commercialUnitMeasure;
+    }
+
+    /**
      * Convert to array for XML generation
      */
     public function toArray(): array
@@ -229,6 +254,7 @@ class LineItem
             'cabys_code' => $this->getCabysCode(),
             'commercial_codes' => array_map(fn (CommercialCode $c) => $c->toArray(), $this->getCommercialCodes()),
             'unit_measure' => $this->getUnitMeasure()?->toArray(),
+            'commercial_unit_measure' => $this->getCommercialUnitMeasure(),
             'description' => $this->getDescription(),
             'quantity' => $this->getQuantity(),
             'unit_price' => $this->getUnitPrice(),

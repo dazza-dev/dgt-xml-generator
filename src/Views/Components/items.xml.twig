@@ -15,6 +15,11 @@
     {% endfor %} {% endif %}
     <Cantidad>{{ item.quantity }}</Cantidad>
     <UnidadMedida>{{ item.unit_measure.code }}</UnidadMedida>
+    {% if item.commercial_unit_measure %}
+    <UnidadMedidaComercial>{{
+      item.commercial_unit_measure
+    }}</UnidadMedidaComercial>
+    {% endif %}
     <TipoTransaccion>01</TipoTransaccion>
     <Detalle>{{ item.description }}</Detalle>
     <PrecioUnitario>{{ item.unit_price }}</PrecioUnitario>
