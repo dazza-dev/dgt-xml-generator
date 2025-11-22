@@ -255,6 +255,27 @@ class Document
     }
 
     /**
+     * Get document number
+     */
+    public function getSequentialNumber(): string
+    {
+        $establishment = $this->getEstablishment();
+        $emissionPoint = $this->getEmissionPoint();
+        $documentType = $this->getDocumentType()->getCode();
+        $sequential = $this->getSequential();
+
+        return $establishment.$emissionPoint.$documentType.$sequential;
+    }
+
+    /**
+     * Get document key
+     */
+    public function getDocumentKey(): string
+    {
+        return 'DocumentKey';
+    }
+
+    /**
      * Get situation
      */
     public function getSituation(): ?Situation
@@ -464,7 +485,8 @@ class Document
     {
         return [
             'document_type' => $this->getDocumentType()->toArray(),
-            'sequential' => $this->getSequential(),
+            'sequential_number' => $this->getSequentialNumber(),
+            'document_key' => $this->getDocumentKey(),
             'date' => $this->getDate(),
             'situation' => $this->getSituation()?->toArray(),
             'sale_condition' => $this->getSaleCondition()?->toArray(),
