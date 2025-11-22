@@ -1,8 +1,8 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models\CreditNote;
+namespace DazzaDev\DgtXmlGenerator\Models\CreditNote;
 
-use DazzaDev\SriXmlGenerator\Models\Document;
+use DazzaDev\DgtXmlGenerator\Models\Document;
 
 class CreditNote extends Document
 {

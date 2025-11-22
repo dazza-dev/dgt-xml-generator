@@ -1,9 +1,9 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models\DebitNote;
+namespace DazzaDev\DgtXmlGenerator\Models\DebitNote;
 
-use DazzaDev\SriXmlGenerator\Models\Document;
-use DazzaDev\SriXmlGenerator\Models\Reason;
+use DazzaDev\DgtXmlGenerator\Models\Document;
+use DazzaDev\DgtXmlGenerator\Models\Reason;
 
 class DebitNote extends Document
 {
