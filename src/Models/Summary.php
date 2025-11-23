@@ -2,8 +2,13 @@
 
 namespace DazzaDev\DgtXmlGenerator\Models;
 
+use DazzaDev\DgtXmlGenerator\Models\Tax\Tax;
+use DazzaDev\DgtXmlGenerator\Traits\TaxesTrait;
+
 class Summary
 {
+    use TaxesTrait;
+
     /**
      * Total servicios gravados con IVA
      */
@@ -174,6 +179,10 @@ class Summary
 
         if (isset($data['total_voucher'])) {
             $this->setTotalVoucher($data['total_voucher']);
+        }
+
+        if (isset($data['taxes'])) {
+            $this->setTaxes($data['taxes']);
         }
     }
 
@@ -472,6 +481,7 @@ class Summary
             'total_net_sale' => $this->getTotalNetSale(),
             'total_tax' => $this->getTotalTax(),
             'total_voucher' => $this->getTotalVoucher(),
+            'taxes' => array_map(fn (Tax $tax) => $tax->toArray(), $this->getTaxes()),
         ];
     }
 }
