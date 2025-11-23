@@ -3,6 +3,7 @@
 namespace DazzaDev\DgtXmlGenerator\Models\LineItem;
 
 use DazzaDev\DgtXmlGenerator\DataLoader;
+use DazzaDev\DgtXmlGenerator\Models\Discount\Discount;
 
 class LineItem
 {
@@ -97,6 +98,11 @@ class LineItem
     protected ?PharmaceuticalForm $pharmaceuticalForm = null;
 
     /**
+     * Discounts
+     */
+    protected array $discounts = [];
+
+    /**
      * LineItem constructor
      *
      * @param  array  $data  LineItem data
@@ -185,6 +191,10 @@ class LineItem
 
         if (isset($data['pharmaceutical_form'])) {
             $this->setPharmaceuticalForm($data['pharmaceutical_form']);
+        }
+
+        if (isset($data['discounts'])) {
+            $this->setDiscounts($data['discounts']);
         }
     }
 
@@ -524,6 +534,35 @@ class LineItem
     }
 
     /**
+     * Get discounts
+     *
+     * @return Discount[]
+     */
+    public function getDiscounts(): array
+    {
+        return $this->discounts;
+    }
+
+    /**
+     * Set discounts
+     */
+    public function setDiscounts(array $discounts): void
+    {
+        $this->discounts = [];
+        foreach ($discounts as $discount) {
+            $this->addDiscount($discount);
+        }
+    }
+
+    /**
+     * Add discount item
+     */
+    public function addDiscount(array|Discount $discount): void
+    {
+        $this->discounts[] = $discount instanceof Discount ? $discount : new Discount($discount);
+    }
+
+    /**
      * Convert to array for XML generation
      */
     public function toArray(): array
@@ -547,6 +586,7 @@ class LineItem
             'assumed_factory_tax' => $this->getAssumedFactoryTax(),
             'total_tax' => $this->getTotalTax(),
             'total' => $this->getTotal(),
+            'discounts' => array_map(fn (Discount $discount) => $discount->toArray(), $this->getDiscounts()),
         ];
     }
 }
