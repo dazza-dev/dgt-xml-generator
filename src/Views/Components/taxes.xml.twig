@@ -1,7 +1,9 @@
 {% for tax in taxes %}
 <{{ node }}>
   <Codigo>{{ tax.tax_type.code }}</Codigo>
-  <CodigoTarifaIVA></CodigoTarifaIVA>
+  {% if tax.iva_type %}
+  <CodigoTarifaIVA>{{ tax.iva_type.code }}</CodigoTarifaIVA>
+  {% endif %}
   {% if tax.rate %}
   <Tarifa>{{ tax.rate }}</Tarifa>
   {% endif %}

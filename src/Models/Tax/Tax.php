@@ -12,6 +12,16 @@ class Tax
     public TaxType $taxType;
 
     /**
+     * Other tax type
+     */
+    public ?string $otherTaxType = null;
+
+    /**
+     * Iva type
+     */
+    public ?IvaType $ivaType = null;
+
+    /**
      * Tax rate
      */
     public ?float $rate = null;
@@ -38,8 +48,16 @@ class Tax
             return;
         }
 
-        if (isset($data['type'])) {
-            $this->setTaxType($data['type']);
+        if (isset($data['tax_type'])) {
+            $this->setTaxType($data['tax_type']);
+        }
+
+        if (isset($data['other_tax_type'])) {
+            $this->setOtherTaxType($data['other_tax_type']);
+        }
+
+        if (isset($data['iva_type'])) {
+            $this->setIvaType($data['iva_type']);
         }
 
         if (isset($data['rate'])) {
@@ -64,9 +82,43 @@ class Tax
      */
     public function setTaxType(int|string $taxTypeCode): void
     {
-        $taxType = (new DataLoader('tax-types'))->getByCode($taxTypeCode);
+        $taxType = (new DataLoader('impuestos'))->getByCode($taxTypeCode);
 
         $this->taxType = new TaxType($taxType);
+    }
+
+    /**
+     * Get other tax type
+     */
+    public function getOtherTaxType(): ?string
+    {
+        return $this->otherTaxType;
+    }
+
+    /**
+     * Set other tax type
+     */
+    public function setOtherTaxType(string $otherTaxType): void
+    {
+        $this->otherTaxType = $otherTaxType;
+    }
+
+    /**
+     * Get iva type
+     */
+    public function getIvaType(): ?IvaType
+    {
+        return $this->ivaType;
+    }
+
+    /**
+     * Set iva type
+     */
+    public function setIvaType(int|string $ivaTypeCode): void
+    {
+        $ivaType = (new DataLoader('codigos-tarifas-iva'))->getByCode($ivaTypeCode);
+
+        $this->ivaType = new IvaType($ivaType);
     }
 
     /**
@@ -108,6 +160,8 @@ class Tax
     {
         return [
             'tax_type' => $this->getTaxType()->toArray(),
+            'other_tax_type' => $this->getOtherTaxType(),
+            'iva_type' => $this->getIvaType()?->toArray(),
             'rate' => $this->getRate(),
             'amount' => $this->getAmount(),
         ];
