@@ -37,10 +37,12 @@
     <SubTotal>{{ item.sub_total }}</SubTotal>
     <BaseImponible>{{ item.taxable_base }}</BaseImponible>
     {% include 'Components/taxes.xml.twig' with { 'node': 'Impuesto','tax':
-    item.tax} %}
-    <ImpuestoAsumidoEmisorFabrica>0</ImpuestoAsumidoEmisorFabrica>
-    <ImpuestoNeto>6.50000</ImpuestoNeto>
-    <MontoTotalLinea>56.50000</MontoTotalLinea>
+    item.taxes } %}
+    <ImpuestoAsumidoEmisorFabrica>{{
+      item.assumed_factory_tax
+    }}</ImpuestoAsumidoEmisorFabrica>
+    <ImpuestoNeto>{{ item.total_tax }}</ImpuestoNeto>
+    <MontoTotalLinea>{{ item.total }}</MontoTotalLinea>
   </LineaDetalle>
   {% endfor %}
 </DetalleServicio>

@@ -47,6 +47,16 @@ class LineItem
     protected float $taxableBase = 0.0;
 
     /**
+     * Assumed Factory Tax
+     */
+    protected float $assumedFactoryTax = 0.0;
+
+    /**
+     * Total Tax
+     */
+    protected float $totalTax = 0.0;
+
+    /**
      * Customs Tariff Code
      */
     protected ?string $customsTariffCode = null;
@@ -142,6 +152,14 @@ class LineItem
 
         if (isset($data['taxable_base'])) {
             $this->setTaxableBase($data['taxable_base']);
+        }
+
+        if (isset($data['assumed_factory_tax'])) {
+            $this->setAssumedFactoryTax($data['assumed_factory_tax']);
+        }
+
+        if (isset($data['total_tax'])) {
+            $this->setTotalTax($data['total_tax']);
         }
 
         if (isset($data['transaction_type'])) {
@@ -271,6 +289,38 @@ class LineItem
     public function setTaxableBase(float $taxableBase): void
     {
         $this->taxableBase = $taxableBase;
+    }
+
+    /**
+     * Get Assumed Factory Tax
+     */
+    public function getAssumedFactoryTax(): float
+    {
+        return $this->assumedFactoryTax;
+    }
+
+    /**
+     * Set Assumed Factory Tax
+     */
+    public function setAssumedFactoryTax(float $assumedFactoryTax): void
+    {
+        $this->assumedFactoryTax = $assumedFactoryTax;
+    }
+
+    /**
+     * Get Total Tax
+     */
+    public function getTotalTax(): float
+    {
+        return $this->totalTax;
+    }
+
+    /**
+     * Set Total Tax
+     */
+    public function setTotalTax(float $totalTax): void
+    {
+        $this->totalTax = $totalTax;
     }
 
     /**
@@ -469,6 +519,9 @@ class LineItem
             'total_amount' => $this->getTotalAmount(),
             'sub_total' => $this->getSubTotal(),
             'taxable_base' => $this->getTaxableBase(),
+            'assumed_factory_tax' => $this->getAssumedFactoryTax(),
+            'total_tax' => $this->getTotalTax(),
+            'total' => $this->getTotal(),
         ];
     }
 }
