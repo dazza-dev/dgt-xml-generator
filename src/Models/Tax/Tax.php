@@ -1,8 +1,8 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models\Tax;
+namespace DazzaDev\DgtXmlGenerator\Models\Tax;
 
-use DazzaDev\SriXmlGenerator\DataLoader;
+use DazzaDev\DgtXmlGenerator\DataLoader;
 
 class Tax
 {

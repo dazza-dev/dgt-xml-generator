@@ -1,8 +1,8 @@
 <?php
 
-namespace DazzaDev\SriXmlGenerator\Models\Tax;
+namespace DazzaDev\DgtXmlGenerator\Models\Tax;
 
-use DazzaDev\SriXmlGenerator\Models\BaseModel;
+use DazzaDev\DgtXmlGenerator\Models\BaseModel;
 
 class TaxType extends BaseModel
 {

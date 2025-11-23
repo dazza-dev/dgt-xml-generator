@@ -4,9 +4,13 @@ namespace DazzaDev\DgtXmlGenerator\Models\LineItem;
 
 use DazzaDev\DgtXmlGenerator\DataLoader;
 use DazzaDev\DgtXmlGenerator\Models\Discount\Discount;
+use DazzaDev\DgtXmlGenerator\Models\Tax\Tax;
+use DazzaDev\DgtXmlGenerator\Traits\TaxesTrait;
 
 class LineItem
 {
+    use TaxesTrait;
+
     /**
      * CABYS Code
      */
@@ -195,6 +199,10 @@ class LineItem
 
         if (isset($data['discounts'])) {
             $this->setDiscounts($data['discounts']);
+        }
+
+        if (isset($data['taxes'])) {
+            $this->setTaxes($data['taxes']);
         }
     }
 
@@ -586,6 +594,7 @@ class LineItem
             'assumed_factory_tax' => $this->getAssumedFactoryTax(),
             'total_tax' => $this->getTotalTax(),
             'total' => $this->getTotal(),
+            'taxes' => array_map(fn (Tax $tax) => $tax->toArray(), $this->getTaxes()),
             'discounts' => array_map(fn (Discount $discount) => $discount->toArray(), $this->getDiscounts()),
         ];
     }
