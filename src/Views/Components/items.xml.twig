@@ -38,8 +38,8 @@
     item.discounts } %}
     <SubTotal>{{ item.sub_total }}</SubTotal>
     <BaseImponible>{{ item.taxable_base }}</BaseImponible>
-    {% include 'Components/taxes.xml.twig' with { 'node': 'Impuesto','tax':
-    item.taxes } %}
+    {% include 'Components/taxes.xml.twig' with { 'node': 'Impuesto',
+    'nodeAmount': 'Monto', 'taxes': item.taxes } %}
     <ImpuestoAsumidoEmisorFabrica>{{
       item.assumed_factory_tax
     }}</ImpuestoAsumidoEmisorFabrica>

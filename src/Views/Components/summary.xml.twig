@@ -26,11 +26,8 @@
   <TotalVenta>{{ summary.total_sale }}</TotalVenta>
   <TotalDescuentos>{{ summary.total_discounts }}</TotalDescuentos>
   <TotalVentaNeta>{{ summary.total_net_sale }}</TotalVentaNeta>
-  <TotalDesgloseImpuesto>
-    <Codigo>01</Codigo>
-    <CodigoTarifaIVA>08</CodigoTarifaIVA>
-    <TotalMontoImpuesto>6.5</TotalMontoImpuesto>
-  </TotalDesgloseImpuesto>
+  {% include 'Components/taxes.xml.twig' with { 'node': 'TotalDesgloseImpuesto',
+  'nodeAmount': 'TotalMontoImpuesto', 'taxes': summary.taxes } %}
   <TotalImpuesto>{{ summary.total_tax }}</TotalImpuesto>
   {% include 'Components/payments.xml.twig' %}
   <TotalComprobante>{{ summary.total_voucher }}</TotalComprobante>
