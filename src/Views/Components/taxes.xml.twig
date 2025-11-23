@@ -1,8 +1,10 @@
 {% for tax in taxes %}
 <{{ node }}>
-  <Codigo>{{ tax.type.code }}</Codigo>
-  <CodigoTarifaIVA>{{ tax.tax_percentage.code }}</CodigoTarifaIVA>
+  <Codigo>{{ tax.tax_type.code }}</Codigo>
+  <CodigoTarifaIVA></CodigoTarifaIVA>
+  {% if tax.rate %}
   <Tarifa>{{ tax.rate }}</Tarifa>
-  <{{ nodeAmount }}>{{ tax.value }}</{{ nodeAmount }}>
+  {% endif %}
+  <{{ nodeAmount }}>{{ tax.amount }}</{{ nodeAmount }}>
 </{{ node }}>
 {% endfor %}
