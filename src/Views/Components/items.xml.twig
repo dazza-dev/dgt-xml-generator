@@ -33,7 +33,7 @@
     <TipoTransaccion>{{ item.transaction_type.code }}</TipoTransaccion>
     <Detalle>{{ item.description }}</Detalle>
     <PrecioUnitario>{{ item.unit_price }}</PrecioUnitario>
-    <MontoTotal>50.00000</MontoTotal>
+    <MontoTotal>{{ item.total_amount }}</MontoTotal>
     <SubTotal>50.00000</SubTotal>
     <BaseImponible>50.00000</BaseImponible>
     {% include 'Components/taxes.xml.twig' with { 'node': 'Impuesto','tax':

@@ -32,6 +32,11 @@ class LineItem
     protected float $unitPrice = 0.0;
 
     /**
+     * Total Amount
+     */
+    protected float $totalAmount = 0.0;
+
+    /**
      * Customs Tariff Code
      */
     protected ?string $customsTariffCode = null;
@@ -117,6 +122,10 @@ class LineItem
             $this->setUnitPrice($data['unit_price']);
         }
 
+        if (isset($data['total_amount'])) {
+            $this->setTotalAmount($data['total_amount']);
+        }
+
         if (isset($data['transaction_type'])) {
             $this->setTransactionType($data['transaction_type']);
         }
@@ -196,6 +205,22 @@ class LineItem
     public function setUnitPrice(float $unitPrice): void
     {
         $this->unitPrice = $unitPrice;
+    }
+
+    /**
+     * Get Total Amount
+     */
+    public function getTotalAmount(): float
+    {
+        return $this->totalAmount;
+    }
+
+    /**
+     * Set Total Amount
+     */
+    public function setTotalAmount(float $totalAmount): void
+    {
+        $this->totalAmount = $totalAmount;
     }
 
     /**
@@ -391,6 +416,7 @@ class LineItem
             'description' => $this->getDescription(),
             'quantity' => $this->getQuantity(),
             'unit_price' => $this->getUnitPrice(),
+            'total_amount' => $this->getTotalAmount(),
         ];
     }
 }
