@@ -1,6 +1,6 @@
-{% if additionalInfo|length > 0 %}
+{% if additional_info|length > 0 %}
 <Otros>
-  {% for item in additionalInfo %}
+  {% for item in additional_info %}
   {% set node = item.type == 'text' ? 'OtroTexto' : 'OtroContenido' %}
   <{{ node }} {% if item.code %} codigo="{{ item.code }}"{% endif %}>{{ item.value }}</{{ node }}>
   {% endfor %}
