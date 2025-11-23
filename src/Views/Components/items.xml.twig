@@ -34,6 +34,8 @@
     <Detalle>{{ item.description }}</Detalle>
     <PrecioUnitario>{{ item.unit_price }}</PrecioUnitario>
     <MontoTotal>{{ item.total_amount }}</MontoTotal>
+    {% include 'Components/discounts.xml.twig' with { 'discounts':
+    item.discounts } %}
     <SubTotal>{{ item.sub_total }}</SubTotal>
     <BaseImponible>{{ item.taxable_base }}</BaseImponible>
     {% include 'Components/taxes.xml.twig' with { 'node': 'Impuesto','tax':
