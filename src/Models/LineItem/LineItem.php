@@ -57,6 +57,11 @@ class LineItem
     protected float $totalTax = 0.0;
 
     /**
+     * Total
+     */
+    protected float $total = 0.0;
+
+    /**
      * Customs Tariff Code
      */
     protected ?string $customsTariffCode = null;
@@ -160,6 +165,10 @@ class LineItem
 
         if (isset($data['total_tax'])) {
             $this->setTotalTax($data['total_tax']);
+        }
+
+        if (isset($data['total'])) {
+            $this->setTotal($data['total']);
         }
 
         if (isset($data['transaction_type'])) {
@@ -321,6 +330,22 @@ class LineItem
     public function setTotalTax(float $totalTax): void
     {
         $this->totalTax = $totalTax;
+    }
+
+    /**
+     * Get Total
+     */
+    public function getTotal(): float
+    {
+        return $this->total;
+    }
+
+    /**
+     * Set Total
+     */
+    public function setTotal(float $total): void
+    {
+        $this->total = $total;
     }
 
     /**
