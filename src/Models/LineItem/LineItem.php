@@ -42,6 +42,11 @@ class LineItem
     protected float $subTotal = 0.0;
 
     /**
+     * Taxable Base
+     */
+    protected float $taxableBase = 0.0;
+
+    /**
      * Customs Tariff Code
      */
     protected ?string $customsTariffCode = null;
@@ -133,6 +138,10 @@ class LineItem
 
         if (isset($data['sub_total'])) {
             $this->setSubTotal($data['sub_total']);
+        }
+
+        if (isset($data['taxable_base'])) {
+            $this->setTaxableBase($data['taxable_base']);
         }
 
         if (isset($data['transaction_type'])) {
@@ -246,6 +255,22 @@ class LineItem
     public function setSubTotal(float $subTotal): void
     {
         $this->subTotal = $subTotal;
+    }
+
+    /**
+     * Get Taxable Base
+     */
+    public function getTaxableBase(): float
+    {
+        return $this->taxableBase;
+    }
+
+    /**
+     * Set Taxable Base
+     */
+    public function setTaxableBase(float $taxableBase): void
+    {
+        $this->taxableBase = $taxableBase;
     }
 
     /**
@@ -443,6 +468,7 @@ class LineItem
             'unit_price' => $this->getUnitPrice(),
             'total_amount' => $this->getTotalAmount(),
             'sub_total' => $this->getSubTotal(),
+            'taxable_base' => $this->getTaxableBase(),
         ];
     }
 }
